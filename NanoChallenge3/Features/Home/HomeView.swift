@@ -45,12 +45,12 @@ struct HomeView: View {
                         //TODO: SET UP GREETINGS AND USER NAME
                         Text("Good \(generateGreeting()), \("Nabiel")!")
                             .font(.title2)
-                            .foregroundColor(.white)
+                            .foregroundColor(Color(uiColor: .white_base))
                             .fontWeight(.semibold)
                             .padding(.bottom, -5)
                         Text("Lets find joy in every day with MRTJ.")
                             .font(.subheadline)
-                            .foregroundColor(.white)
+                            .foregroundColor(Color(uiColor: .white_base))
                             .fontWeight(.regular)
                         HStack{
                             Image("Location")
@@ -58,7 +58,7 @@ struct HomeView: View {
                             //TODO: SET UP NEAREST STATION
                             Text("Nearest Station **\("Blok M")**")
                                 .font(.footnote)
-                                .foregroundColor(.white)
+                                .foregroundColor(Color(red: 223/255, green: 223/255, blue: 223/255))
                         }
                         .padding(.top, 4)
                     }
