@@ -8,6 +8,7 @@
 import SwiftUI
 
 extension UIColor{
+    static var white_base: UIColor{ return UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)}
     static var blue_base: UIColor{ return UIColor(red: 27/255, green: 79/255, blue: 152/255, alpha: 1)}
     static var blue_40: UIColor{ return UIColor(red: 103/255, green: 138/255, blue: 186/255, alpha: 1)}
     static var green_base: UIColor{ return UIColor(red: 52/255, green: 181/255, blue: 89/255, alpha: 1)}

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    
     enum TicketPayment: String, CaseIterable, Identifiable {
         case mrtPay, oneWay, roundTrip
         var id: Self { self }
@@ -22,8 +23,18 @@ struct HomeView: View {
 //    }
 
     @State private var selectedTicketPayment: TicketPayment = .mrtPay
+//    @State var greetings = ""
 //    @State private var selectedDepartureStation: MrtStation = .LebakBulus
 //    @State private var selectedDestinationStation: MrtStation = .BlokM
+    
+    init() {
+        //CUSTOMIZE PICKER THEME
+        UISegmentedControl.appearance().backgroundColor = .gray2_base
+        UISegmentedControl.appearance().setDividerImage(UIImage(), forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
+        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor.blue_base
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white_base], for: .selected)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.gray_base], for: .normal)
+    }
     
     var body: some View {
         ZStack{
@@ -32,7 +43,7 @@ struct HomeView: View {
                 HStack{
                     VStack(alignment: .leading){
                         //TODO: SET UP GREETINGS AND USER NAME
-                        Text("Good \("Morning"), \("Nabiel")!")
+                        Text("Good \(generateGreeting()), \("Nabiel")!")
                             .font(.title2)
                             .foregroundColor(.white)
                             .fontWeight(.semibold)
@@ -61,8 +72,7 @@ struct HomeView: View {
                 
                 VStack{
                     Picker("Ticket Payment", selection: $selectedTicketPayment) {
-                        Text("MRTPay Beta")
-                            .tag(TicketPayment.mrtPay)
+                        Text("MRTPay").tag(TicketPayment.mrtPay)
                         Text("One Way").tag(TicketPayment.oneWay)
                         Text("Round Trip").tag(TicketPayment.roundTrip)
                     }
@@ -83,7 +93,7 @@ struct HomeView: View {
                     .padding(.vertical, 20)
                 }
                 .background(.white)
-                .overlay( /// apply a rounded border
+                .overlay(
                     RoundedRectangle(cornerRadius: 20)
                         .stroke(Color(UIColor.gray2_base), lineWidth: 1)
                 )
@@ -95,6 +105,19 @@ struct HomeView: View {
             
         }
         .ignoresSafeArea()
+    }
+    
+    func generateGreeting() -> String{
+        var greetings: String
+        let hour = Calendar.current.component(.hour, from: Date())
+        if hour >= 4 && hour < 12 {
+            greetings = "Morning"
+        }else if hour >= 12 && hour < 18 {
+            greetings = "Afternoon"
+        }else {
+            greetings = "Evening"
+        }
+        return greetings
     }
 }
 
