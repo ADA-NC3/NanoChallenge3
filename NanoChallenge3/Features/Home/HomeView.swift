@@ -106,19 +106,6 @@ struct HomeView: View {
         }
         .ignoresSafeArea()
     }
-    
-    func generateGreeting() -> String{
-        var greetings: String
-        let hour = Calendar.current.component(.hour, from: Date())
-        if hour >= 4 && hour < 12 {
-            greetings = "Morning"
-        }else if hour >= 12 && hour < 18 {
-            greetings = "Afternoon"
-        }else {
-            greetings = "Evening"
-        }
-        return greetings
-    }
 }
 
 struct HomeView_Previews: PreviewProvider {
