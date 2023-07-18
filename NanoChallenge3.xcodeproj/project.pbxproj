@@ -29,6 +29,7 @@
 		A9D377902A6598C10092D4B4 /* OneWayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D3778F2A6598C10092D4B4 /* OneWayView.swift */; };
 		A9D377932A6599220092D4B4 /* RoundTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D377922A6599220092D4B4 /* RoundTripView.swift */; };
 		A9E5E8642A667AEF001E4DBB /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E5E8632A667AEF001E4DBB /* HomeViewModel.swift */; };
+		A9E5E8662A6696FE001E4DBB /* StationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E5E8652A6696FE001E4DBB /* StationListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		A9D3778F2A6598C10092D4B4 /* OneWayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneWayView.swift; sourceTree = "<group>"; };
 		A9D377922A6599220092D4B4 /* RoundTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTripView.swift; sourceTree = "<group>"; };
 		A9E5E8632A667AEF001E4DBB /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A9E5E8652A6696FE001E4DBB /* StationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				A9D377882A657CA60092D4B4 /* RoundedCorner.swift */,
+				A9E5E8652A6696FE001E4DBB /* StationListView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				A9D377822A65770F0092D4B4 /* HomeView.swift in Sources */,
 				A9D377862A6577680092D4B4 /* Color.swift in Sources */,
 				A9D377892A657CA60092D4B4 /* RoundedCorner.swift in Sources */,
+				A9E5E8662A6696FE001E4DBB /* StationListView.swift in Sources */,
 				A9D377902A6598C10092D4B4 /* OneWayView.swift in Sources */,
 				A9E5E8642A667AEF001E4DBB /* HomeViewModel.swift in Sources */,
 				38B86E012A61319300686287 /* ContentView.swift in Sources */,

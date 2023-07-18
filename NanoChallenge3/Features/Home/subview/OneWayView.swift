@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct OneWayView: View {
-    
-    @StateObject var mrtStation = MRTStation()
     @State var departureStationSheet = false
     @State var destinationStationSheet = false
     @StateObject var vm = HomeViewModel()
@@ -36,7 +34,7 @@ struct OneWayView: View {
                             departureStationSheet = true
                         }
                         .sheet(isPresented: $departureStationSheet) {
-                            StationPickerModalView(stationType: "Departure")
+                            StationPickerModalView(sheetOpenStatus: $departureStationSheet, stationType: "Departure")
                         }
                         Divider()
                             .overlay(Color(uiColor: .gray2_base))
@@ -60,7 +58,7 @@ struct OneWayView: View {
                             destinationStationSheet = true
                         }
                         .sheet(isPresented: $destinationStationSheet) {
-                            StationPickerModalView(stationType: "Destination")
+                            StationPickerModalView(sheetOpenStatus: $destinationStationSheet, stationType: "Destination")
                         }
                         Divider()
                             .overlay(Color(uiColor: .gray2_base))

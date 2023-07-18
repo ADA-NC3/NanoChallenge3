@@ -47,4 +47,16 @@ class HomeViewModel: ObservableObject {
         }
         return greetings
     }
+    
+    func pickStation(type: String, stationSelected: MRTStation.MrtStation){
+        if type == "Departure"{
+            selectedDepartureStation = stationSelected
+            print(selectedDepartureStation)
+        }else if type == "Destination"{
+            selectedDestinationStation = stationSelected
+            print(selectedDestinationStation)
+        }else {
+            print("ERROR: UNRECOGNIZED STATION_TYPE")
+        }
+    }
 }

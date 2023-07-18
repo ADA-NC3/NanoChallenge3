@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct RoundTripView: View {
-    
-    @StateObject var mrtStation = MRTStation()
     @State var departureStationSheet = false
     @State var destinationStationSheet = false
     @StateObject var vm = HomeViewModel()
@@ -37,7 +35,7 @@ struct RoundTripView: View {
                             departureStationSheet = true
                         }
                         .sheet(isPresented: $departureStationSheet) {
-                            StationPickerModalView(stationType: "Departure")
+                            StationPickerModalView(sheetOpenStatus: $departureStationSheet, stationType: "Departure")
                         }
                         Divider()
                             .overlay(Color(uiColor: .gray2_base))
@@ -61,7 +59,7 @@ struct RoundTripView: View {
                             destinationStationSheet = true
                         }
                         .sheet(isPresented: $destinationStationSheet) {
-                            StationPickerModalView(stationType: "Destination")
+                            StationPickerModalView(sheetOpenStatus: $destinationStationSheet, stationType: "Destination")
                         }
                         Divider()
                             .overlay(Color(uiColor: .gray2_base))
