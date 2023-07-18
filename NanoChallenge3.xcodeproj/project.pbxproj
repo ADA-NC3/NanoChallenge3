@@ -16,6 +16,13 @@
 		38B86E132A61319400686287 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B86E122A61319400686287 /* ContentView.swift */; };
 		38B86E152A61319500686287 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B86E142A61319500686287 /* Assets.xcassets */; };
 		38B86E182A61319500686287 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B86E172A61319500686287 /* Preview Assets.xcassets */; };
+		9518A9142A664EF4004EBB52 /* TicketsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518A9132A664EF4004EBB52 /* TicketsView.swift */; };
+		9518A9172A665E91004EBB52 /* TicketList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518A9162A665E91004EBB52 /* TicketList.swift */; };
+		9518A9192A665EBF004EBB52 /* TicketRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518A9182A665EBF004EBB52 /* TicketRow.swift */; };
+		9518A91B2A665FB8004EBB52 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518A91A2A665FB8004EBB52 /* Ticket.swift */; };
+		9518A91C2A665FB8004EBB52 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518A91A2A665FB8004EBB52 /* Ticket.swift */; };
+		9518A91E2A667F9B004EBB52 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518A91D2A667F9B004EBB52 /* QRView.swift */; };
+		9518A91F2A667F9B004EBB52 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518A91D2A667F9B004EBB52 /* QRView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +60,11 @@
 		38B86E122A61319400686287 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		38B86E142A61319500686287 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38B86E172A61319500686287 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9518A9132A664EF4004EBB52 /* TicketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsView.swift; sourceTree = "<group>"; };
+		9518A9162A665E91004EBB52 /* TicketList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketList.swift; sourceTree = "<group>"; };
+		9518A9182A665EBF004EBB52 /* TicketRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketRow.swift; sourceTree = "<group>"; };
+		9518A91A2A665FB8004EBB52 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
+		9518A91D2A667F9B004EBB52 /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +127,11 @@
 			children = (
 				38B86E102A61319400686287 /* NanoChallenge3App.swift */,
 				38B86E122A61319400686287 /* ContentView.swift */,
+				9518A91A2A665FB8004EBB52 /* Ticket.swift */,
+				9518A9132A664EF4004EBB52 /* TicketsView.swift */,
+				9518A9162A665E91004EBB52 /* TicketList.swift */,
+				9518A9182A665EBF004EBB52 /* TicketRow.swift */,
+				9518A91D2A667F9B004EBB52 /* QRView.swift */,
 				38B86E142A61319500686287 /* Assets.xcassets */,
 				38B86E162A61319500686287 /* Preview Content */,
 			);
@@ -232,6 +249,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				38B86E012A61319300686287 /* ContentView.swift in Sources */,
+				9518A91E2A667F9B004EBB52 /* QRView.swift in Sources */,
+				9518A91B2A665FB8004EBB52 /* Ticket.swift in Sources */,
 				38B86DFF2A61319300686287 /* NanoChallenge3App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,8 +259,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9518A9142A664EF4004EBB52 /* TicketsView.swift in Sources */,
+				9518A91C2A665FB8004EBB52 /* Ticket.swift in Sources */,
+				9518A9192A665EBF004EBB52 /* TicketRow.swift in Sources */,
 				38B86E132A61319400686287 /* ContentView.swift in Sources */,
 				38B86E112A61319400686287 /* NanoChallenge3App.swift in Sources */,
+				9518A9172A665E91004EBB52 /* TicketList.swift in Sources */,
+				9518A91F2A667F9B004EBB52 /* QRView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
