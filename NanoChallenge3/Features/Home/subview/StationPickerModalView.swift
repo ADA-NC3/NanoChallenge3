@@ -11,22 +11,23 @@ struct StationPickerModalView: View {
     
     @State var searchStation = ""
     @StateObject var mrtStation = MRTStation()
+    @StateObject var vm = HomeViewModel()
     var stationType: String
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(stationSearchResult) { station in
+                ForEach(vm.searchStationFilter(searchText: searchStation)) { station in
                     Text(station.rawValue)
                         .listRowSeparator(.hidden)
                         .listRowInsets(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
                         .onTapGesture {
                             //TODO: MASIH BELOM KE GANTI OPTIONNYA DI HALAMAN HOME
                             if stationType == "Departure"{
-                                mrtStation.selectedDepartureStation = station
+                                vm.selectedDepartureStation = station
                                 print("a")
                             }else if stationType == "Destination"{
-                                mrtStation.selectedDestinationStation = station
+                                vm.selectedDestinationStation = station
                                 print("b")
                             }else {
                                 print("ERROR: UNRECOGNIZED STATION_TYPE")
@@ -53,22 +54,6 @@ struct StationPickerModalView: View {
             
         }
         .presentationDragIndicator(.visible)
-    }
-    
-    var stationSearchResult: [MRTStation.MrtStation]{
-        if searchStation.isEmpty {
-            return mrtStation.stationArray
-        }
-        else {
-            var filteredStation: [MRTStation.MrtStation] = []
-            for station in mrtStation.stationArray {
-                if (station.rawValue.range(of: searchStation, options: .caseInsensitive) != nil){
-                    filteredStation.append(station)
-                }
-            }
-            return filteredStation
-
-        }
     }
 }
 

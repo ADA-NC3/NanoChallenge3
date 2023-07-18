@@ -16,6 +16,7 @@ struct HomeView: View {
 
     @StateObject var mrtStation = MRTStation()
     @State private var selectedTicketPayment: TicketPayment = .mrtPay
+    @StateObject var vm = HomeViewModel()
     
     init() {
         //CUSTOMIZE PICKER THEME
@@ -33,7 +34,7 @@ struct HomeView: View {
                 HStack{
                     VStack(alignment: .leading){
                         //TODO: SET UP GREETINGS AND USER NAME
-                        Text("Good \(generateGreeting()), \("Nabiel")!")
+                        Text("Good \(vm.generateGreeting()), \("Nabiel")!")
                             .font(.title2)
                             .foregroundColor(Color(uiColor: .white_base))
                             .fontWeight(.semibold)

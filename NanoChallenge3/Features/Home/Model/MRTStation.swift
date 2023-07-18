@@ -8,9 +8,6 @@
 import Foundation
 
 final class MRTStation: ObservableObject {
-    let stationArray: [MrtStation] = [.LebakBulus, .Fatmawati, .CipeteRaya, .HajiNawi, .BlokA, .BlokM, .ASEAN, .Senayan, .Istora, .BendunganHilir, .SetiaBudi, .DukuhAtas, .BundaranHI]
-    @Published var selectedDepartureStation = MrtStation.LebakBulus
-    @Published var selectedDestinationStation = MrtStation.BundaranHI
     
     enum MrtStation: String, CaseIterable, Identifiable {
         case    LebakBulus = "Lebak Bulus Grab",
@@ -28,17 +25,4 @@ final class MRTStation: ObservableObject {
                 BundaranHI = "Bundaran HI"
         var id: Self { self }
     }
-    
-    func switchStation(){
-        let temp = selectedDepartureStation
-        selectedDepartureStation = selectedDestinationStation
-        selectedDestinationStation = temp
-    }
-    
-//    func setDepartureStation(station: MrtStation){
-//        selectedDepartureStation = station
-//    }
-//    func setDestinationStation(station: MrtStation){
-//        selectedDestinationStation = station
-//    }
 }

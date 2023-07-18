@@ -12,6 +12,7 @@ struct RoundTripView: View {
     @StateObject var mrtStation = MRTStation()
     @State var departureStationSheet = false
     @State var destinationStationSheet = false
+    @StateObject var vm = HomeViewModel()
     
     var body: some View {
         
@@ -27,7 +28,7 @@ struct RoundTripView: View {
                         
                         HStack{
                             Image("Train1")
-                            Text("\(mrtStation.selectedDepartureStation.rawValue)")
+                            Text("\(vm.selectedDepartureStation.rawValue)")
                                 .font(.body)
                                 .foregroundColor(.black)
                             Spacer()
@@ -51,7 +52,7 @@ struct RoundTripView: View {
                         
                         HStack{
                             Image("Train2")
-                            Text("\(mrtStation.selectedDestinationStation.rawValue)")
+                            Text("\(vm.selectedDestinationStation.rawValue)")
                                 .font(.body)
                                 .foregroundColor(.black)
                             Spacer()
@@ -71,7 +72,7 @@ struct RoundTripView: View {
                     .padding(.top, 16)
                     .foregroundColor(Color(uiColor: .blue_base))
                     .onTapGesture {
-                        mrtStation.switchStation()
+                        vm.switchStation()
                     }
             }
             

@@ -12,8 +12,7 @@ struct OneWayView: View {
     @StateObject var mrtStation = MRTStation()
     @State var departureStationSheet = false
     @State var destinationStationSheet = false
-//    @State var searchStation = ""
-//    @State var departureStation = "false"
+    @StateObject var vm = HomeViewModel()
     
     var body: some View {
         VStack(alignment: .leading){
@@ -28,7 +27,7 @@ struct OneWayView: View {
                         
                         HStack{
                             Image("Train1")
-                            Text("\(mrtStation.selectedDepartureStation.rawValue)")
+                            Text("\(vm.selectedDepartureStation.rawValue)")
                                 .font(.body)
                                 .foregroundColor(.black)
                             Spacer()
@@ -52,7 +51,7 @@ struct OneWayView: View {
                         
                         HStack{
                             Image("Train2")
-                            Text("\(mrtStation.selectedDestinationStation.rawValue)")
+                            Text("\(vm.selectedDestinationStation.rawValue)")
                                 .font(.body)
                                 .foregroundColor(.black)
                             Spacer()
@@ -72,7 +71,9 @@ struct OneWayView: View {
                     .padding(.top, 16)
                     .foregroundColor(Color(uiColor: .blue_base))
                     .onTapGesture {
-                        mrtStation.switchStation()
+                        vm.switchStation()
+                        print(vm.selectedDepartureStation)
+                        print("al")
                     }
             }
             
