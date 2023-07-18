@@ -13,19 +13,9 @@ struct HomeView: View {
         case mrtPay, oneWay, roundTrip
         var id: Self { self }
     }
-    
-//    enum MrtStation: String, CaseIterable, Identifiable {
-//        case    LebakBulus = "Lebak Bulus Grab",
-//                BlokM = "Blok M",
-//                DukuAtas = "Duku Atas",
-//                BundaranHI = "Bundaran HI"
-//        var id: Self { self }
-//    }
 
+    @StateObject var mrtStation = MRTStation()
     @State private var selectedTicketPayment: TicketPayment = .mrtPay
-//    @State var greetings = ""
-//    @State private var selectedDepartureStation: MrtStation = .LebakBulus
-//    @State private var selectedDestinationStation: MrtStation = .BlokM
     
     init() {
         //CUSTOMIZE PICKER THEME
