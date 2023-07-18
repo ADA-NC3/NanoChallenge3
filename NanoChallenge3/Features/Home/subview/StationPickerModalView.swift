@@ -10,15 +10,14 @@ import SwiftUI
 struct StationPickerModalView: View {
     
     @State var searchStation = ""
-    @StateObject var mrtStation = MRTStation()
     @StateObject var vm = HomeViewModel()
     var stationType: String
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(vm.searchStationFilter(searchText: searchStation)) { station in
-                    Text(station.rawValue)
+                ForEach(vm.searchStationFilter(searchText: searchStation), id: \.name) { station in
+                    Text(station.name)
                         .listRowSeparator(.hidden)
                         .listRowInsets(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
                         .onTapGesture {
@@ -33,10 +32,7 @@ struct StationPickerModalView: View {
                                 print("ERROR: UNRECOGNIZED STATION_TYPE")
                             }
                         }
-//                                                Divider()
-//                                                    .listRowInsets(EdgeInsets())
-                }
-                
+                }   
             }
             .searchable(text: $searchStation)
             .listStyle(.plain)
