@@ -25,13 +25,13 @@ struct OneWayView: View {
                         
                         HStack{
                             Image("Train1")
-                            Text("\(vm.selectedDepartureStation.rawValue)")
+                            Text("\(vm.selectedDepartureStation?.name ?? "Blok M")")
                                 .font(.body)
                                 .foregroundColor(.black)
                             Spacer()
                         }
                         .onTapGesture {
-                            departureStationSheet = true
+                            chooseStationSheet = true
                         }
                         .sheet(isPresented: $departureStationSheet) {
                             StationPickerModalView(sheetOpenStatus: $departureStationSheet, vm: vm, stationType: "Departure")
@@ -50,13 +50,13 @@ struct OneWayView: View {
                         
                         HStack{
                             Image("Train2")
-                            Text("\(vm.selectedDestinationStation.rawValue)")
+                            Text("\(vm.selectedDestinationStation?.name ?? "Lebak Bulus")")
                                 .font(.body)
                                 .foregroundColor(.black)
                             Spacer()
                         }
                         .onTapGesture {
-                            destinationStationSheet = true
+                            chooseStationSheet = true
                         }
                         .sheet(isPresented: $destinationStationSheet) {
                             StationPickerModalView(sheetOpenStatus: $destinationStationSheet, vm: vm, stationType: "Destination")
