@@ -96,7 +96,9 @@ struct HomeView: View {
             
         }
         .ignoresSafeArea()
+        .preferredColorScheme(.dark)
     }
+    
 }
 
 struct HomeView_Previews: PreviewProvider {

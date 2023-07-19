@@ -36,6 +36,7 @@ struct RoundTripView: View {
                         }
                         .sheet(isPresented: $departureStationSheet) {
                             StationPickerModalView(sheetOpenStatus: $departureStationSheet, stationType: "Departure")
+                                .preferredColorScheme(.light)
                         }
                         Divider()
                             .overlay(Color(uiColor: .gray2_base))
@@ -60,6 +61,7 @@ struct RoundTripView: View {
                         }
                         .sheet(isPresented: $destinationStationSheet) {
                             StationPickerModalView(sheetOpenStatus: $destinationStationSheet, stationType: "Destination")
+                                .preferredColorScheme(.light)
                         }
                         Divider()
                             .overlay(Color(uiColor: .gray2_base))
