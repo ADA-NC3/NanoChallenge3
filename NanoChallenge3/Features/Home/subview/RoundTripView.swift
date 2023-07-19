@@ -9,7 +9,6 @@ import SwiftUI
 
 struct RoundTripView: View {
     
-    @StateObject var mrtStation = MRTStation()
     @State var departureStationSheet = false
     @State var destinationStationSheet = false
     @StateObject var vm = HomeViewModel()
@@ -28,7 +27,7 @@ struct RoundTripView: View {
                         
                         HStack{
                             Image("Train1")
-                            Text("\(vm.selectedDepartureStation.rawValue)")
+                            Text("\(vm.selectedDepartureStation?.name ?? "")")
                                 .font(.body)
                                 .foregroundColor(.black)
                             Spacer()
@@ -52,7 +51,7 @@ struct RoundTripView: View {
                         
                         HStack{
                             Image("Train2")
-                            Text("\(vm.selectedDestinationStation.rawValue)")
+                            Text("\(vm.selectedDestinationStation?.name ?? "")")
                                 .font(.body)
                                 .foregroundColor(.black)
                             Spacer()

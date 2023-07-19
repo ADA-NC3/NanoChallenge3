@@ -9,9 +9,7 @@ import SwiftUI
 
 struct OneWayView: View {
     
-    @StateObject var mrtStation = MRTStation()
-    @State var departureStationSheet = false
-    @State var destinationStationSheet = false
+    @State var chooseStationSheet = false
     @StateObject var vm = HomeViewModel()
     
     var body: some View {
@@ -27,15 +25,15 @@ struct OneWayView: View {
                         
                         HStack{
                             Image("Train1")
-                            Text("\(vm.selectedDepartureStation.rawValue)")
+                            Text("\(vm.selectedDepartureStation?.name ?? "Blok M")")
                                 .font(.body)
                                 .foregroundColor(.black)
                             Spacer()
                         }
                         .onTapGesture {
-                            departureStationSheet = true
+                            chooseStationSheet = true
                         }
-                        .sheet(isPresented: $departureStationSheet) {
+                        .sheet(isPresented: $chooseStationSheet) {
                             StationPickerModalView(stationType: "Departure")
                         }
                         Divider()
@@ -51,15 +49,15 @@ struct OneWayView: View {
                         
                         HStack{
                             Image("Train2")
-                            Text("\(vm.selectedDestinationStation.rawValue)")
+                            Text("\(vm.selectedDestinationStation?.name ?? "Lebak Bulus")")
                                 .font(.body)
                                 .foregroundColor(.black)
                             Spacer()
                         }
                         .onTapGesture {
-                            destinationStationSheet = true
+                            chooseStationSheet = true
                         }
-                        .sheet(isPresented: $destinationStationSheet) {
+                        .sheet(isPresented: $chooseStationSheet) {
                             StationPickerModalView(stationType: "Destination")
                         }
                         Divider()

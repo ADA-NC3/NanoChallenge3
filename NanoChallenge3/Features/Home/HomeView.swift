@@ -14,9 +14,9 @@ struct HomeView: View {
         var id: Self { self }
     }
 
-    @StateObject var mrtStation = MRTStation()
     @State private var selectedTicketPayment: TicketPayment = .mrtPay
-    @StateObject var vm = HomeViewModel()
+    @StateObject private var vm = HomeViewModel()
+    @StateObject private var locationManager = LocationManager()
     
     init() {
         //CUSTOMIZE PICKER THEME
@@ -47,9 +47,12 @@ struct HomeView: View {
                             Image("Location")
                                 .padding(.trailing, -5)
                             //TODO: SET UP NEAREST STATION
-                            Text("Nearest Station **\("Blok M")**")
-                                .font(.footnote)
-                                .foregroundColor(Color(red: 223/255, green: 223/255, blue: 223/255))
+                            if let userLocation = locationManager.location?.coordinate,
+                               let nearestLocation = vm.findNearestStation(userLocation: userLocation) {
+                                Text("Nearest Station **\(nearestLocation.name)**")
+                                    .font(.footnote)
+                                    .foregroundColor(Color(red: 223/255, green: 223/255, blue: 223/255))
+                            }
                         }
                         .padding(.top, 4)
                     }
