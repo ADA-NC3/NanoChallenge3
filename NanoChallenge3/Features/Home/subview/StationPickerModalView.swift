@@ -13,7 +13,7 @@ struct StationPickerModalView: View {
     @State var searchStation = ""
     @Binding var sheetOpenStatus: Bool
     @StateObject var mrtStation = MRTStation()
-    @StateObject var vm = HomeViewModel()
+    @StateObject var vm: HomeViewModel
     var stationType: String
     
     var body: some View {
@@ -24,6 +24,10 @@ struct StationPickerModalView: View {
                         .listRowSeparator(.hidden)
                         .listSectionSeparator(.hidden)
                         .listRowInsets(EdgeInsets())
+                        .onTapGesture {
+                            vm.pickStation(type: stationType, stationSelected: station)
+                            sheetOpenStatus = false
+                        }
                 }
             }
             .searchable(text: $searchStation, placement: .navigationBarDrawer(displayMode: .always))
@@ -48,6 +52,6 @@ struct StationPickerModalView: View {
 
 struct StationPickerModalView_Previews: PreviewProvider {
     static var previews: some View {
-        StationPickerModalView(sheetOpenStatus: .constant(true), stationType: "Departure")
+        StationPickerModalView(sheetOpenStatus: .constant(true), vm: HomeViewModel(), stationType: "Departure")
     }
 }

@@ -10,7 +10,7 @@ import SwiftUI
 struct OneWayView: View {
     @State var departureStationSheet = false
     @State var destinationStationSheet = false
-    @StateObject var vm = HomeViewModel()
+    @StateObject var vm: HomeViewModel
     
     var body: some View {
         VStack(alignment: .leading){
@@ -34,7 +34,7 @@ struct OneWayView: View {
                             departureStationSheet = true
                         }
                         .sheet(isPresented: $departureStationSheet) {
-                            StationPickerModalView(sheetOpenStatus: $departureStationSheet, stationType: "Departure")
+                            StationPickerModalView(sheetOpenStatus: $departureStationSheet, vm: vm, stationType: "Departure")
                                 .preferredColorScheme(.light)
                         }
                         Divider()
@@ -59,7 +59,7 @@ struct OneWayView: View {
                             destinationStationSheet = true
                         }
                         .sheet(isPresented: $destinationStationSheet) {
-                            StationPickerModalView(sheetOpenStatus: $destinationStationSheet, stationType: "Destination")
+                            StationPickerModalView(sheetOpenStatus: $destinationStationSheet, vm: vm, stationType: "Destination")
                                 .preferredColorScheme(.light)
                         }
                         Divider()
@@ -108,6 +108,6 @@ struct OneWayView: View {
 
 struct OneWayView_Previews: PreviewProvider {
     static var previews: some View {
-        OneWayView()
+        OneWayView(vm: HomeViewModel())
     }
 }

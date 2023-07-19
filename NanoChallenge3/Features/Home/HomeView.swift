@@ -24,7 +24,7 @@ struct HomeView: View {
         UISegmentedControl.appearance().setDividerImage(UIImage(), forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
         UISegmentedControl.appearance().selectedSegmentTintColor = UIColor.blue_base
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white_base], for: .selected)
-        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.gray_base], for: .normal)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.pickerTextColor], for: .normal)
     }
     
     var body: some View {
@@ -71,13 +71,14 @@ struct HomeView: View {
                     .padding(.top, 20)
                     .pickerStyle(.segmented)
                     
+                    
                     VStack{
                         if selectedTicketPayment == TicketPayment.mrtPay {
                             MRTPayView()
                         } else if selectedTicketPayment == TicketPayment.oneWay{
-                            OneWayView()
+                            OneWayView(vm: vm)
                         } else if selectedTicketPayment == TicketPayment.roundTrip{
-                            RoundTripView()
+                            RoundTripView(vm: vm)
                         }
                     }
                     .padding(.horizontal, 20)
@@ -91,6 +92,66 @@ struct HomeView: View {
                 .cornerRadius(20)
                 .padding(.top, -150)
                 .padding(.horizontal, 25)
+                
+                VStack {
+                    HStack{
+                        Text("Nearest Arrival")
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.black)
+                        Spacer()
+                        Button{
+                            
+                        } label: {
+                            Text("See More")
+                                .foregroundColor(Color(uiColor: .blue_base))
+                        }
+                    }
+                    HStack{
+                        HStack{
+                            Image("nearestArrivalDot")
+                            VStack(alignment: .leading) {
+                                Text("To Bundaran HI")
+                                    .font(.subheadline)
+                                    .foregroundColor(.black)
+                                Text("09:47")
+                                    .foregroundColor(Color(uiColor: .blue_base))
+                                    .font(.title)
+                                    .fontWeight(.bold)
+                                Text("09:52")
+                                    .font(.body)
+                                    .foregroundColor(Color(uiColor: .gray_base))
+                            }
+                        }
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 20)
+                        
+                        HStack{
+                            Image("nearestArrivalDot")
+                            VStack(alignment: .leading) {
+                                Text("To Lb. Bulus")
+                                    .font(.subheadline)
+                                    .foregroundColor(.black)
+                                Text("09:45")
+                                    .foregroundColor(Color(uiColor: .blue_base))
+                                    .font(.title)
+                                    .fontWeight(.bold)
+                                Text("09:50")
+                                    .font(.body)
+                                    .foregroundColor(Color(uiColor: .gray_base))
+                            }
+                        }
+                        .padding(.vertical, 20)
+                        Spacer()
+                    }
+                    .background(.white)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 20)
+                            .stroke(Color(UIColor.gray2_base), lineWidth: 1)
+                    )
+                }
+                .padding(.horizontal, 25)
+                .padding(.vertical, 30)
                 Spacer()
             }
             
