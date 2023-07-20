@@ -23,6 +23,27 @@
 		3F47D55D2A668018006BF185 /* MockPaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F47D55C2A668018006BF185 /* MockPaymentModel.swift */; };
 		3F47D55F2A668D9B006BF185 /* PaymentSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F47D55E2A668D9B006BF185 /* PaymentSuccessView.swift */; };
 		3F47D5612A682BB6006BF185 /* PaymentFailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F47D5602A682BB6006BF185 /* PaymentFailedView.swift */; };
+		38C7D8952A691E7B003B4317 /* MRTStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C7D8942A691E7B003B4317 /* MRTStation.swift */; };
+		38C7D8972A691EB3003B4317 /* StationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C7D8962A691EB3003B4317 /* StationListView.swift */; };
+		4C17FDA72A6684B7008CB998 /* StationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C17FDA62A6684B7008CB998 /* StationModel.swift */; };
+		4C17FDA92A6688DF008CB998 /* LocationDataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C17FDA82A6688DF008CB998 /* LocationDataServices.swift */; };
+		4C17FDAF2A66C044008CB998 /* MyTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C17FDAE2A66C044008CB998 /* MyTicketView.swift */; };
+		4C17FDB32A66CA7E008CB998 /* TicketCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C17FDB22A66CA7E008CB998 /* TicketCardView.swift */; };
+		4C17FDB52A67C7A1008CB998 /* MyTicketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C17FDB42A67C7A1008CB998 /* MyTicketViewModel.swift */; };
+		4C17FDB72A67CA0E008CB998 /* MyTicketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C17FDB62A67CA0E008CB998 /* MyTicketModel.swift */; };
+		4C17FDBA2A67CD67008CB998 /* Array+Extemsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C17FDB92A67CD67008CB998 /* Array+Extemsion.swift */; };
+		4C17FDBC2A67E93D008CB998 /* DetailTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C17FDBB2A67E93D008CB998 /* DetailTicketView.swift */; };
+		4CE5EC572A65822200A7A7FA /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE5EC562A65822200A7A7FA /* LocationManager.swift */; };
+		A95790322A666154002CCCC4 /* StationPickerModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95790312A666154002CCCC4 /* StationPickerModalView.swift */; };
+		A9D377822A65770F0092D4B4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D377812A65770F0092D4B4 /* HomeView.swift */; };
+		A9D377862A6577680092D4B4 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D377852A6577680092D4B4 /* Color.swift */; };
+		A9D377872A6577680092D4B4 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D377852A6577680092D4B4 /* Color.swift */; };
+		A9D377892A657CA60092D4B4 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D377882A657CA60092D4B4 /* RoundedCorner.swift */; };
+		A9D3778D2A658FBB0092D4B4 /* MRTPayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D3778C2A658FBB0092D4B4 /* MRTPayView.swift */; };
+		A9D3778E2A658FBB0092D4B4 /* MRTPayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D3778C2A658FBB0092D4B4 /* MRTPayView.swift */; };
+		A9D377902A6598C10092D4B4 /* OneWayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D3778F2A6598C10092D4B4 /* OneWayView.swift */; };
+		A9D377932A6599220092D4B4 /* RoundTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D377922A6599220092D4B4 /* RoundTripView.swift */; };
+		A9E5E8642A667AEF001E4DBB /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E5E8632A667AEF001E4DBB /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +88,25 @@
 		3F47D55C2A668018006BF185 /* MockPaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPaymentModel.swift; sourceTree = "<group>"; };
 		3F47D55E2A668D9B006BF185 /* PaymentSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSuccessView.swift; sourceTree = "<group>"; };
 		3F47D5602A682BB6006BF185 /* PaymentFailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFailedView.swift; sourceTree = "<group>"; };
+		38C7D8942A691E7B003B4317 /* MRTStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRTStation.swift; sourceTree = "<group>"; };
+		38C7D8962A691EB3003B4317 /* StationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationListView.swift; sourceTree = "<group>"; };
+		4C17FDA62A6684B7008CB998 /* StationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationModel.swift; sourceTree = "<group>"; };
+		4C17FDA82A6688DF008CB998 /* LocationDataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataServices.swift; sourceTree = "<group>"; };
+		4C17FDAE2A66C044008CB998 /* MyTicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketView.swift; sourceTree = "<group>"; };
+		4C17FDB22A66CA7E008CB998 /* TicketCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCardView.swift; sourceTree = "<group>"; };
+		4C17FDB42A67C7A1008CB998 /* MyTicketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketViewModel.swift; sourceTree = "<group>"; };
+		4C17FDB62A67CA0E008CB998 /* MyTicketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketModel.swift; sourceTree = "<group>"; };
+		4C17FDB92A67CD67008CB998 /* Array+Extemsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extemsion.swift"; sourceTree = "<group>"; };
+		4C17FDBB2A67E93D008CB998 /* DetailTicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTicketView.swift; sourceTree = "<group>"; };
+		4CE5EC562A65822200A7A7FA /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		A95790312A666154002CCCC4 /* StationPickerModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationPickerModalView.swift; sourceTree = "<group>"; };
+		A9D377812A65770F0092D4B4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A9D377852A6577680092D4B4 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		A9D377882A657CA60092D4B4 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		A9D3778C2A658FBB0092D4B4 /* MRTPayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRTPayView.swift; sourceTree = "<group>"; };
+		A9D3778F2A6598C10092D4B4 /* OneWayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneWayView.swift; sourceTree = "<group>"; };
+		A9D377922A6599220092D4B4 /* RoundTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTripView.swift; sourceTree = "<group>"; };
+		A9E5E8632A667AEF001E4DBB /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +149,11 @@
 			isa = PBXGroup;
 			children = (
 				3F47D54E2A662DCA006BF185 /* PaymentMethod */,
+				4C17FDAC2A669705008CB998 /* Utilities */,
+				4C17FDAA2A66968A008CB998 /* Services */,
+				A9D377842A6577430092D4B4 /* Core */,
+				A9D3777C2A6576BA0092D4B4 /* Features */,
+				4C17FDAB2A6696C3008CB998 /* Model */,
 				38B86DFE2A61319300686287 /* NanoChallenge3App.swift */,
 				38B86E002A61319300686287 /* ContentView.swift */,
 				38B86E022A61319400686287 /* Assets.xcassets */,
@@ -180,6 +225,140 @@
 				3F47D55C2A668018006BF185 /* MockPaymentModel.swift */,
 			);
 			path = ModelPayment;
+      sourceTree = "<group>";
+     };
+		38C7D8932A691E66003B4317 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				38C7D8942A691E7B003B4317 /* MRTStation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4C17FDAA2A66968A008CB998 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4C17FDA82A6688DF008CB998 /* LocationDataServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4C17FDAB2A6696C3008CB998 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C17FDA62A6684B7008CB998 /* StationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4C17FDAC2A669705008CB998 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4CE5EC562A65822200A7A7FA /* LocationManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4C17FDAD2A66C010008CB998 /* MyTicket */ = {
+			isa = PBXGroup;
+			children = (
+				4C17FDB82A67CA14008CB998 /* MyTicketModel */,
+				4C17FDB12A66C053008CB998 /* MyTicketViewModel */,
+				4C17FDB02A66C048008CB998 /* MyTicketView */,
+			);
+			path = MyTicket;
+			sourceTree = "<group>";
+		};
+		4C17FDB02A66C048008CB998 /* MyTicketView */ = {
+			isa = PBXGroup;
+			children = (
+				4C17FDAE2A66C044008CB998 /* MyTicketView.swift */,
+				4C17FDB22A66CA7E008CB998 /* TicketCardView.swift */,
+				4C17FDBB2A67E93D008CB998 /* DetailTicketView.swift */,
+			);
+			path = MyTicketView;
+			sourceTree = "<group>";
+		};
+		4C17FDB12A66C053008CB998 /* MyTicketViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4C17FDB42A67C7A1008CB998 /* MyTicketViewModel.swift */,
+			);
+			path = MyTicketViewModel;
+			sourceTree = "<group>";
+		};
+		4C17FDB82A67CA14008CB998 /* MyTicketModel */ = {
+			isa = PBXGroup;
+			children = (
+				4C17FDB62A67CA0E008CB998 /* MyTicketModel.swift */,
+			);
+			path = MyTicketModel;
+			sourceTree = "<group>";
+		};
+		A9CFE65B2A65BD960080D84D /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				A9D377852A6577680092D4B4 /* Color.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		A9CFE65C2A65BDA70080D84D /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				A9D377882A657CA60092D4B4 /* RoundedCorner.swift */,
+				38C7D8962A691EB3003B4317 /* StationListView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		A9CFE65D2A65BDEF0080D84D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A9E5E8632A667AEF001E4DBB /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A9D3777C2A6576BA0092D4B4 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				4C17FDAD2A66C010008CB998 /* MyTicket */,
+				A9D3777D2A6576C80092D4B4 /* Home */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		A9D3777D2A6576C80092D4B4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A9D377812A65770F0092D4B4 /* HomeView.swift */,
+				A9D3778B2A658FA60092D4B4 /* subview */,
+				38C7D8932A691E66003B4317 /* Model */,
+				A9CFE65D2A65BDEF0080D84D /* ViewModel */,
+				A9CFE65C2A65BDA70080D84D /* Component */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A9D377842A6577430092D4B4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A9CFE65B2A65BD960080D84D /* Theme */,
+				4C17FDB92A67CD67008CB998 /* Array+Extemsion.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A9D3778B2A658FA60092D4B4 /* subview */ = {
+			isa = PBXGroup;
+			children = (
+				A9D3778C2A658FBB0092D4B4 /* MRTPayView.swift */,
+				A9D3778F2A6598C10092D4B4 /* OneWayView.swift */,
+				A9D377922A6599220092D4B4 /* RoundTripView.swift */,
+				A95790312A666154002CCCC4 /* StationPickerModalView.swift */,
+			);
+			path = subview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +463,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38C7D8952A691E7B003B4317 /* MRTStation.swift in Sources */,
+				4C17FDB72A67CA0E008CB998 /* MyTicketModel.swift in Sources */,
+				A95790322A666154002CCCC4 /* StationPickerModalView.swift in Sources */,
+				4C17FDB32A66CA7E008CB998 /* TicketCardView.swift in Sources */,
+				38C7D8972A691EB3003B4317 /* StationListView.swift in Sources */,
+				4C17FDB52A67C7A1008CB998 /* MyTicketViewModel.swift in Sources */,
+				A9D377932A6599220092D4B4 /* RoundTripView.swift in Sources */,
+				4C17FDAF2A66C044008CB998 /* MyTicketView.swift in Sources */,
+				A9D377822A65770F0092D4B4 /* HomeView.swift in Sources */,
+				A9D377862A6577680092D4B4 /* Color.swift in Sources */,
+				A9D377892A657CA60092D4B4 /* RoundedCorner.swift in Sources */,
+				A9D377902A6598C10092D4B4 /* OneWayView.swift in Sources */,
+				4C17FDBC2A67E93D008CB998 /* DetailTicketView.swift in Sources */,
+				A9E5E8642A667AEF001E4DBB /* HomeViewModel.swift in Sources */,
+				4C17FDBA2A67CD67008CB998 /* Array+Extemsion.swift in Sources */,
 				38B86E012A61319300686287 /* ContentView.swift in Sources */,
 				3F47D5502A662ECE006BF185 /* HeaderPayment.swift in Sources */,
 				3F47D55D2A668018006BF185 /* MockPaymentModel.swift in Sources */,
@@ -293,6 +487,10 @@
 				3F47D5522A66335A006BF185 /* ChoosePayment.swift in Sources */,
 				3F47D5612A682BB6006BF185 /* PaymentFailedView.swift in Sources */,
 				3F47D54D2A662DA7006BF185 /* PaymentMethodView.swift in Sources */,
+				4CE5EC572A65822200A7A7FA /* LocationManager.swift in Sources */,
+				4C17FDA72A6684B7008CB998 /* StationModel.swift in Sources */,
+				4C17FDA92A6688DF008CB998 /* LocationDataServices.swift in Sources */,
+				A9D3778D2A658FBB0092D4B4 /* MRTPayView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +498,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9D377872A6577680092D4B4 /* Color.swift in Sources */,
+				A9D3778E2A658FBB0092D4B4 /* MRTPayView.swift in Sources */,
 				38B86E132A61319400686287 /* ContentView.swift in Sources */,
 				38B86E112A61319400686287 /* NanoChallenge3App.swift in Sources */,
 			);
@@ -433,7 +633,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NanoChallenge3 Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = UWJ26F79V5;
+				DEVELOPMENT_TEAM = 8DNTD99SB6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = NanoChallenge3;
@@ -463,7 +663,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NanoChallenge3 Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = UWJ26F79V5;
+				DEVELOPMENT_TEAM = 8DNTD99SB6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = NanoChallenge3;
@@ -495,10 +695,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NanoChallenge3/Preview Content\"";
-				DEVELOPMENT_TEAM = UWJ26F79V5;
+				DEVELOPMENT_TEAM = 8DNTD99SB6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = NanoChallenge3;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app need your location to show it on the map.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -528,10 +729,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NanoChallenge3/Preview Content\"";
-				DEVELOPMENT_TEAM = UWJ26F79V5;
+				DEVELOPMENT_TEAM = 8DNTD99SB6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = NanoChallenge3;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app need your location to show it on the map.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
