@@ -25,7 +25,7 @@ struct OneWayView: View {
                         
                         HStack{
                             Image("Train1")
-                            Text("\(vm.selectedDepartureStation.rawValue)")
+                            Text("\(vm.selectedDepartureStation?.name ?? "Blok M")")
                                 .font(.body)
                                 .foregroundColor(.black)
                             Spacer()
@@ -50,7 +50,7 @@ struct OneWayView: View {
                         
                         HStack{
                             Image("Train2")
-                            Text("\(vm.selectedDestinationStation.rawValue)")
+                            Text("\(vm.selectedDestinationStation?.name ?? "Lebak Bulus")")
                                 .font(.body)
                                 .foregroundColor(.black)
                             Spacer()

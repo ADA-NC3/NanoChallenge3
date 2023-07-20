@@ -41,17 +41,3 @@ extension LocationManager: CLLocationManagerDelegate {
         }
     }
 }
-
-extension MKCoordinateRegion {
-    
-    static func defaultRegion() -> MKCoordinateRegion {
-        let centerCoordinate = CLLocationCoordinate2D(latitude: -6.302265847748711, longitude: 106.65233924320476) // default sementara ambil lokasi GOP
-        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-        return MKCoordinateRegion(center: centerCoordinate, span: span)
-    }
-    
-    func getBinding() -> Binding<MKCoordinateRegion>? {
-        return Binding<MKCoordinateRegion>(.constant(self))
-    }
-    
-}

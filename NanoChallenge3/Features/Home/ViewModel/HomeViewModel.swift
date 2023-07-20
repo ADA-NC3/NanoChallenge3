@@ -7,12 +7,35 @@
 
 import Foundation
 import SwiftUI
+import MapKit
 
 class HomeViewModel: ObservableObject {
     
-    let stationArray: [MRTStation.MrtStation] = [.LebakBulus, .Fatmawati, .CipeteRaya, .HajiNawi, .BlokA, .BlokM, .ASEAN, .Senayan, .Istora, .BendunganHilir, .SetiaBudi, .DukuhAtas, .BundaranHI]
-    @Published var selectedDepartureStation = MRTStation.MrtStation.Fatmawati
-    @Published var selectedDestinationStation = MRTStation.MrtStation.BundaranHI
+    @Published var selectedDepartureStation: StationModel?
+    @Published var selectedDestinationStation: StationModel?
+    
+    @Published var locations: [StationModel]
+    
+    init() {
+        let locations = LocationDataServices.locations
+        self.locations = locations
+    }
+    
+    func findNearestStation(userLocation: CLLocationCoordinate2D) -> StationModel? {
+        var nearestStation: StationModel? = nil
+        var shortDistance: CLLocationDistance = Double.greatestFiniteMagnitude
+        
+        for location in locations {
+            let stationLocation = CLLocation(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            let distance = stationLocation.distance(from: CLLocation(latitude: userLocation.latitude, longitude: userLocation.longitude))
+            if distance < shortDistance {
+                shortDistance = distance
+                nearestStation = location
+            }
+        }
+        
+        return nearestStation
+    }
     
     func switchStation(){
         let temp = selectedDepartureStation
@@ -20,13 +43,13 @@ class HomeViewModel: ObservableObject {
         selectedDestinationStation = temp
     }
     
-    func searchStationFilter(searchText: String) -> [MRTStation.MrtStation]{
+    func searchStationFilter(searchText: String) -> [StationModel]{
         if searchText.isEmpty {
-            return stationArray
+            return locations
         } else {
-            var filteredStation: [MRTStation.MrtStation] = []
-            for station in stationArray {
-                if (station.rawValue.range(of: searchText, options: .caseInsensitive) != nil){
+            var filteredStation: [StationModel] = []
+            for station in locations {
+                if (station.name.range(of: searchText, options: .caseInsensitive) != nil){
                     filteredStation.append(station)
                 }
             }

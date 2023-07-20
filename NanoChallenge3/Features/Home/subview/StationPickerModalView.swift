@@ -28,7 +28,7 @@ struct StationPickerModalView: View {
                             vm.pickStation(type: stationType, stationSelected: station)
                             sheetOpenStatus = false
                         }
-                }
+                }   
             }
             .searchable(text: $searchStation, placement: .navigationBarDrawer(displayMode: .always))
             .listStyle(.plain)
