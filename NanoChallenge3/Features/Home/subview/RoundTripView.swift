@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct RoundTripView: View {
-    
     @State var departureStationSheet = false
     @State var destinationStationSheet = false
-    @StateObject var vm = HomeViewModel()
+    @StateObject var vm: HomeViewModel
     
     var body: some View {
         
@@ -27,7 +26,7 @@ struct RoundTripView: View {
                         
                         HStack{
                             Image("Train1")
-                            Text("\(vm.selectedDepartureStation?.name ?? "")")
+                            Text("\(vm.selectedDepartureStation.rawValue)")
                                 .font(.body)
                                 .foregroundColor(.black)
                             Spacer()
@@ -36,7 +35,8 @@ struct RoundTripView: View {
                             departureStationSheet = true
                         }
                         .sheet(isPresented: $departureStationSheet) {
-                            StationPickerModalView(stationType: "Departure")
+                            StationPickerModalView(sheetOpenStatus: $departureStationSheet, vm: vm, stationType: "Departure")
+                                .preferredColorScheme(.light)
                         }
                         Divider()
                             .overlay(Color(uiColor: .gray2_base))
@@ -51,7 +51,7 @@ struct RoundTripView: View {
                         
                         HStack{
                             Image("Train2")
-                            Text("\(vm.selectedDestinationStation?.name ?? "")")
+                            Text("\(vm.selectedDestinationStation.rawValue)")
                                 .font(.body)
                                 .foregroundColor(.black)
                             Spacer()
@@ -60,7 +60,8 @@ struct RoundTripView: View {
                             destinationStationSheet = true
                         }
                         .sheet(isPresented: $destinationStationSheet) {
-                            StationPickerModalView(stationType: "Destination")
+                            StationPickerModalView(sheetOpenStatus: $destinationStationSheet, vm: vm, stationType: "Destination")
+                                .preferredColorScheme(.light)
                         }
                         Divider()
                             .overlay(Color(uiColor: .gray2_base))
@@ -106,6 +107,6 @@ struct RoundTripView: View {
 
 struct RoundTripView_Previews: PreviewProvider {
     static var previews: some View {
-        RoundTripView()
+        RoundTripView(vm: HomeViewModel())
     }
 }
