@@ -19,8 +19,8 @@ struct StationPickerModalView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(vm.searchStationFilter(searchText: searchStation)) { station in
-                    StationListView(station: station.rawValue)
+                ForEach(vm.searchStationFilter(searchText: searchStation), id: \.name) { station in
+                    StationListView(station: station.name)
                         .listRowSeparator(.hidden)
                         .listSectionSeparator(.hidden)
                         .listRowInsets(EdgeInsets())
@@ -41,7 +41,7 @@ struct StationPickerModalView: View {
                 }
                 
             }
-            .navigationTitle("(stationType) Station")
+            .navigationTitle("\(stationType) Station")
             .navigationBarTitleDisplayMode(.inline)
             
         }

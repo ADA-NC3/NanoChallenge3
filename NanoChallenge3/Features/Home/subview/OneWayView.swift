@@ -25,7 +25,7 @@ struct OneWayView: View {
                         
                         HStack{
                             Image("Train1")
-                            Text("\(vm.selectedDepartureStation.rawValue)")
+                            Text("\(vm.selectedDepartureStation?.name ?? "")")
                                 .font(.body)
                                 .foregroundColor(.black)
                             Spacer()
@@ -50,7 +50,7 @@ struct OneWayView: View {
                         
                         HStack{
                             Image("Train2")
-                            Text("\(vm.selectedDestinationStation.rawValue)")
+                            Text("\(vm.selectedDestinationStation?.name ?? "")")
                                 .font(.body)
                                 .foregroundColor(.black)
                             Spacer()
@@ -72,8 +72,6 @@ struct OneWayView: View {
                     .foregroundColor(Color(uiColor: .blue_base))
                     .onTapGesture {
                         vm.switchStation()
-                        print(vm.selectedDepartureStation)
-                        print("al")
                     }
             }
             
