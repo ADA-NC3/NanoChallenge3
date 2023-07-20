@@ -16,6 +16,13 @@
 		38B86E132A61319400686287 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B86E122A61319400686287 /* ContentView.swift */; };
 		38B86E152A61319500686287 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B86E142A61319500686287 /* Assets.xcassets */; };
 		38B86E182A61319500686287 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B86E172A61319500686287 /* Preview Assets.xcassets */; };
+		3F47D54D2A662DA7006BF185 /* PaymentMethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F47D54C2A662DA7006BF185 /* PaymentMethodView.swift */; };
+		3F47D5502A662ECE006BF185 /* HeaderPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F47D54F2A662ECE006BF185 /* HeaderPayment.swift */; };
+		3F47D5522A66335A006BF185 /* ChoosePayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F47D5512A66335A006BF185 /* ChoosePayment.swift */; };
+		3F47D55B2A667F3C006BF185 /* PayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F47D55A2A667F3C006BF185 /* PayView.swift */; };
+		3F47D55D2A668018006BF185 /* MockPaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F47D55C2A668018006BF185 /* MockPaymentModel.swift */; };
+		3F47D55F2A668D9B006BF185 /* PaymentSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F47D55E2A668D9B006BF185 /* PaymentSuccessView.swift */; };
+		3F47D5612A682BB6006BF185 /* PaymentFailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F47D5602A682BB6006BF185 /* PaymentFailedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +60,13 @@
 		38B86E122A61319400686287 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		38B86E142A61319500686287 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38B86E172A61319500686287 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3F47D54C2A662DA7006BF185 /* PaymentMethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodView.swift; sourceTree = "<group>"; };
+		3F47D54F2A662ECE006BF185 /* HeaderPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderPayment.swift; sourceTree = "<group>"; };
+		3F47D5512A66335A006BF185 /* ChoosePayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePayment.swift; sourceTree = "<group>"; };
+		3F47D55A2A667F3C006BF185 /* PayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayView.swift; sourceTree = "<group>"; };
+		3F47D55C2A668018006BF185 /* MockPaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPaymentModel.swift; sourceTree = "<group>"; };
+		3F47D55E2A668D9B006BF185 /* PaymentSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSuccessView.swift; sourceTree = "<group>"; };
+		3F47D5602A682BB6006BF185 /* PaymentFailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFailedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +108,7 @@
 		38B86DFD2A61319300686287 /* NanoChallenge3 */ = {
 			isa = PBXGroup;
 			children = (
+				3F47D54E2A662DCA006BF185 /* PaymentMethod */,
 				38B86DFE2A61319300686287 /* NanoChallenge3App.swift */,
 				38B86E002A61319300686287 /* ContentView.swift */,
 				38B86E022A61319400686287 /* Assets.xcassets */,
@@ -127,6 +142,44 @@
 				38B86E172A61319500686287 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3F47D54E2A662DCA006BF185 /* PaymentMethod */ = {
+			isa = PBXGroup;
+			children = (
+				3F47D5642A682CD2006BF185 /* ModelPayment */,
+				3F47D5632A682CAF006BF185 /* ComponentPayment */,
+				3F47D5622A682C9A006BF185 /* ScenePayment */,
+			);
+			path = PaymentMethod;
+			sourceTree = "<group>";
+		};
+		3F47D5622A682C9A006BF185 /* ScenePayment */ = {
+			isa = PBXGroup;
+			children = (
+				3F47D54C2A662DA7006BF185 /* PaymentMethodView.swift */,
+				3F47D55A2A667F3C006BF185 /* PayView.swift */,
+				3F47D55E2A668D9B006BF185 /* PaymentSuccessView.swift */,
+				3F47D5602A682BB6006BF185 /* PaymentFailedView.swift */,
+			);
+			path = ScenePayment;
+			sourceTree = "<group>";
+		};
+		3F47D5632A682CAF006BF185 /* ComponentPayment */ = {
+			isa = PBXGroup;
+			children = (
+				3F47D54F2A662ECE006BF185 /* HeaderPayment.swift */,
+				3F47D5512A66335A006BF185 /* ChoosePayment.swift */,
+			);
+			path = ComponentPayment;
+			sourceTree = "<group>";
+		};
+		3F47D5642A682CD2006BF185 /* ModelPayment */ = {
+			isa = PBXGroup;
+			children = (
+				3F47D55C2A668018006BF185 /* MockPaymentModel.swift */,
+			);
+			path = ModelPayment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,7 +285,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				38B86E012A61319300686287 /* ContentView.swift in Sources */,
+				3F47D5502A662ECE006BF185 /* HeaderPayment.swift in Sources */,
+				3F47D55D2A668018006BF185 /* MockPaymentModel.swift in Sources */,
 				38B86DFF2A61319300686287 /* NanoChallenge3App.swift in Sources */,
+				3F47D55B2A667F3C006BF185 /* PayView.swift in Sources */,
+				3F47D55F2A668D9B006BF185 /* PaymentSuccessView.swift in Sources */,
+				3F47D5522A66335A006BF185 /* ChoosePayment.swift in Sources */,
+				3F47D5612A682BB6006BF185 /* PaymentFailedView.swift in Sources */,
+				3F47D54D2A662DA7006BF185 /* PaymentMethodView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
