@@ -14,56 +14,83 @@ struct TicketCardView: View {
     @StateObject private var vm = MyTicketViewModel()
     
     var body: some View {
-        HStack(spacing: 36) {
-            Image("QRCode")
-                .resizable()
-                .frame(width: 80, height: 80)
-            
-            VStack(alignment: .leading, spacing: 8) {
+        ZStack {
+            Image("ticketBackground")
+            VStack {
                 HStack {
-                    VStack(alignment: .leading) {
-                        Text("From")
-                            .foregroundColor(Color(uiColor: .gray_base))
-                        Text(model.departure)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    Text("From")
                     
-                    VStack(alignment: .leading) {
-                        Text("To")
-                            .foregroundColor(Color(uiColor: .gray_base))
-                        Text(model.destination)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    Spacer()
+                    
+                    Text("To")
                 }
+                .padding(.top)
+                .font(.caption)
+                .foregroundColor(Color(uiColor: .gray_base))
                 
-                VStack(alignment: .leading) {
-                    Text("Date")
+                HStack {
+                    Text(model.departure)
+                        .font(.headline)
+                        .foregroundColor(Color(uiColor: .blue_base))
+                    
+                    Spacer()
+                    
+                    Image(systemName: "arrow.right")
                         .foregroundColor(Color(uiColor: .gray_base))
+                    
+                    Spacer()
+                    
+                    Text(model.destination)
+                        .font(.headline)
+                        .foregroundColor(Color(uiColor: .blue_base))
+                }
+                .padding(.bottom, 14)
+                
+                HStack {
+                    Text("Price")
+                        .foregroundColor(Color(uiColor: .gray_base))
+                    
+                    Spacer()
+                    
+                    Text("Rp. 20.000")
+                        .foregroundColor(Color(uiColor: .blue_base))
+                }
+                .font(.caption)
+                
+                Line()
+                    .stroke(style: StrokeStyle(lineWidth: 1, dash: [10]))
+                    .frame(height: 1)
+                    .padding(.bottom, 5)
+                    .foregroundColor(Color(uiColor: .gray_base))
+                
+                HStack {
+                    Text("Expired Date")
+                        .foregroundColor(Color(uiColor: .gray_base))
+                    
+                    Spacer()
+                    
                     Text(model.date)
                 }
+                .font(.caption)
+                .padding(.bottom, 20)
             }
-            .font(.subheadline)
-        }
-        .padding(.leading, 36)
-        .padding(.vertical, 20)
-        .overlay {
-            RoundedRectangle(cornerRadius: 20)
-                .inset(by: 0.5)
-                .stroke(Color(uiColor: .gray_base), lineWidth: 1)
-        }
-        .onTapGesture {
-            vm.sheetDetailTicket = true
-        }
-        .sheet(isPresented: $vm.sheetDetailTicket, onDismiss: {
-            dismiss()
-        }, content: {
-            DetailTicketView(model: model)
+            .padding(.horizontal)
+            .frame(width: 340, height: 133)
+            .onTapGesture {
+                vm.sheetDetailTicket = true
+            }
+            .sheet(isPresented: $vm.sheetDetailTicket, onDismiss: {
+                dismiss()
+            }, content: {
+                DetailTicketView(model: model)
         })
+        }
     }
+    
 }
 
 struct TicketCardView_Previews: PreviewProvider {
     static var previews: some View {
-        TicketCardView(model: MyTicketModel(departure: "Lb. Bulus", destination: "Blok M", date: "17 July 2023"))
+        TicketCardView(model: MyTicketModel(departure: "Departure", destination: "Destination", date: "Date"))
     }
 }

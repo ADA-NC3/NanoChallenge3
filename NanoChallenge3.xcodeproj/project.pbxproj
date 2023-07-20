@@ -16,14 +16,15 @@
 		38B86E132A61319400686287 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B86E122A61319400686287 /* ContentView.swift */; };
 		38B86E152A61319500686287 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B86E142A61319500686287 /* Assets.xcassets */; };
 		38B86E182A61319500686287 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B86E172A61319500686287 /* Preview Assets.xcassets */; };
+		4C17FDA72A6684B7008CB998 /* StationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C17FDA62A6684B7008CB998 /* StationModel.swift */; };
+		4C17FDA92A6688DF008CB998 /* LocationDataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C17FDA82A6688DF008CB998 /* LocationDataServices.swift */; };
 		4C17FDAF2A66C044008CB998 /* MyTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C17FDAE2A66C044008CB998 /* MyTicketView.swift */; };
 		4C17FDB32A66CA7E008CB998 /* TicketCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C17FDB22A66CA7E008CB998 /* TicketCardView.swift */; };
 		4C17FDB52A67C7A1008CB998 /* MyTicketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C17FDB42A67C7A1008CB998 /* MyTicketViewModel.swift */; };
 		4C17FDB72A67CA0E008CB998 /* MyTicketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C17FDB62A67CA0E008CB998 /* MyTicketModel.swift */; };
 		4C17FDBA2A67CD67008CB998 /* Array+Extemsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C17FDB92A67CD67008CB998 /* Array+Extemsion.swift */; };
 		4C17FDBC2A67E93D008CB998 /* DetailTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C17FDBB2A67E93D008CB998 /* DetailTicketView.swift */; };
-		4C17FDA72A6684B7008CB998 /* StationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C17FDA62A6684B7008CB998 /* StationModel.swift */; };
-		4C17FDA92A6688DF008CB998 /* LocationDataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C17FDA82A6688DF008CB998 /* LocationDataServices.swift */; };
+		4C82BE6E2A6969F60030C29F /* Line+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C82BE6D2A6969F60030C29F /* Line+Extension.swift */; };
 		4CE5EC572A65822200A7A7FA /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE5EC562A65822200A7A7FA /* LocationManager.swift */; };
 		A95790322A666154002CCCC4 /* StationPickerModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95790312A666154002CCCC4 /* StationPickerModalView.swift */; };
 		A9D377822A65770F0092D4B4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D377812A65770F0092D4B4 /* HomeView.swift */; };
@@ -72,14 +73,15 @@
 		38B86E122A61319400686287 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		38B86E142A61319500686287 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38B86E172A61319500686287 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4C17FDA62A6684B7008CB998 /* StationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationModel.swift; sourceTree = "<group>"; };
+		4C17FDA82A6688DF008CB998 /* LocationDataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataServices.swift; sourceTree = "<group>"; };
 		4C17FDAE2A66C044008CB998 /* MyTicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketView.swift; sourceTree = "<group>"; };
 		4C17FDB22A66CA7E008CB998 /* TicketCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCardView.swift; sourceTree = "<group>"; };
 		4C17FDB42A67C7A1008CB998 /* MyTicketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketViewModel.swift; sourceTree = "<group>"; };
 		4C17FDB62A67CA0E008CB998 /* MyTicketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketModel.swift; sourceTree = "<group>"; };
 		4C17FDB92A67CD67008CB998 /* Array+Extemsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extemsion.swift"; sourceTree = "<group>"; };
 		4C17FDBB2A67E93D008CB998 /* DetailTicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTicketView.swift; sourceTree = "<group>"; };
-		4C17FDA62A6684B7008CB998 /* StationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationModel.swift; sourceTree = "<group>"; };
-		4C17FDA82A6688DF008CB998 /* LocationDataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataServices.swift; sourceTree = "<group>"; };
+		4C82BE6D2A6969F60030C29F /* Line+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Line+Extension.swift"; sourceTree = "<group>"; };
 		4CE5EC562A65822200A7A7FA /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		A95790312A666154002CCCC4 /* StationPickerModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationPickerModalView.swift; sourceTree = "<group>"; };
 		A9D377812A65770F0092D4B4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -170,6 +172,30 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		4C17FDAA2A66968A008CB998 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4C17FDA82A6688DF008CB998 /* LocationDataServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4C17FDAB2A6696C3008CB998 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C17FDA62A6684B7008CB998 /* StationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4C17FDAC2A669705008CB998 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4CE5EC562A65822200A7A7FA /* LocationManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		4C17FDAD2A66C010008CB998 /* MyTicket */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,30 +230,6 @@
 				4C17FDB62A67CA0E008CB998 /* MyTicketModel.swift */,
 			);
 			path = MyTicketModel;
-      sourceTree = "<group>";
-    };
-		4C17FDAA2A66968A008CB998 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				4C17FDA82A6688DF008CB998 /* LocationDataServices.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		4C17FDAB2A6696C3008CB998 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				4C17FDA62A6684B7008CB998 /* StationModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		4C17FDAC2A669705008CB998 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				4CE5EC562A65822200A7A7FA /* LocationManager.swift */,
-			);
-			path = Utilities;
 			sourceTree = "<group>";
 		};
 		A9CFE65B2A65BD960080D84D /* Theme */ = {
@@ -279,6 +281,7 @@
 			children = (
 				A9CFE65B2A65BD960080D84D /* Theme */,
 				4C17FDB92A67CD67008CB998 /* Array+Extemsion.swift */,
+				4C82BE6D2A6969F60030C29F /* Line+Extension.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -396,10 +399,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9CFE6622A6641CB0080D84D /* MRTStation.swift in Sources */,
 				4C17FDB72A67CA0E008CB998 /* MyTicketModel.swift in Sources */,
 				A95790322A666154002CCCC4 /* StationPickerModalView.swift in Sources */,
 				4C17FDB32A66CA7E008CB998 /* TicketCardView.swift in Sources */,
+				4C82BE6E2A6969F60030C29F /* Line+Extension.swift in Sources */,
 				4C17FDB52A67C7A1008CB998 /* MyTicketViewModel.swift in Sources */,
 				A9D377932A6599220092D4B4 /* RoundTripView.swift in Sources */,
 				4C17FDAF2A66C044008CB998 /* MyTicketView.swift in Sources */,
