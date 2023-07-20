@@ -29,7 +29,7 @@ struct HomeView: View {
     
     var body: some View {
         ZStack{
-            Color(.white)
+            Color(.white).ignoresSafeArea()
             VStack{
                 HStack{
                     VStack(alignment: .leading){
