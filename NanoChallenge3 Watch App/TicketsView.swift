@@ -8,20 +8,13 @@
 import SwiftUI
 
 struct TicketsView: View {
-    var tickets = ["A", "B"]
+    var tickets: [String] = []
     var body: some View {
-        NavigationView{
             if tickets.isEmpty {
-                    VStack{
-                        Spacer()
-                        Text("You haven't purchased any ticket yet. Please purchase your ticket on the MRT-J phone app.").multilineTextAlignment(.center)
-                        Spacer()
-                }.navigationTitle("Tickets")
+                    EmptyTicketView()
             }else{
-                TicketList()
+                TicketList(times: tickets)
             }
-        }
-        
     }
 }
 
@@ -30,7 +23,9 @@ struct TicketsView_Previews: PreviewProvider {
         NavigationView {
                 TicketsView()
             }
-        .navigationTitle("Tickets").tint(.blue)
+        .navigationTitle("Tickets")
                 
     }
 }
+//"14.05", "14.12","14.13","14.14","14.15"
+

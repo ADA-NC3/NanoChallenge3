@@ -8,22 +8,39 @@
 import SwiftUI
 
 struct TicketList: View {
-    var times = ["14.05", "14.12","14.13","14.14","14.15"]
+    var times: [String]
+    
     var body: some View {
-        List{
-            ForEach(times.prefix(4),  id: \.self){ ticket in NavigationLink{
-                QRView()
-            } label: {
-                TicketRow(arrival: ticket)
-            }
+        NavigationView {
+            List {
+                TicketListHeader().listRowBackground(Color.clear)
                 
-            }.navigationTitle("Tickets")
+                ForEach(times.prefix(4), id: \.self) { ticket in
+                    NavigationLink(destination: QRView()) {
+                        TicketRow(arrival: ticket)
+                    }
+                }
+            }.listStyle(DefaultListStyle())
         }
+    }
+}
+
+struct TicketListHeader: View {
+    var body: some View {
+        HStack {
+            Text("Trips")
+                .font(.system(size: 31))
+                .fontWeight(.medium)
+                .foregroundColor(Color(red: 10 / 255, green: 132 / 255, blue: 255 / 255))
+            
+            Spacer()
+        }
+        
     }
 }
 
 struct TicketList_Previews: PreviewProvider {
     static var previews: some View {
-        TicketList()
+        TicketList(times: ["14.05", "14.12","14.13","14.14","14.15"])
     }
 }

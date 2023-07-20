@@ -23,6 +23,9 @@
 		9518A91C2A665FB8004EBB52 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518A91A2A665FB8004EBB52 /* Ticket.swift */; };
 		9518A91E2A667F9B004EBB52 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518A91D2A667F9B004EBB52 /* QRView.swift */; };
 		9518A91F2A667F9B004EBB52 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518A91D2A667F9B004EBB52 /* QRView.swift */; };
+		958EFEF22A67B498005F6DC8 /* EmptyTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958EFEF12A67B498005F6DC8 /* EmptyTicketView.swift */; };
+		958EFEF42A68EA54005F6DC8 /* PinVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958EFEF32A68EA54005F6DC8 /* PinVIew.swift */; };
+		958EFEF62A68F179005F6DC8 /* ScanMRTPayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958EFEF52A68F179005F6DC8 /* ScanMRTPayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,9 @@
 		9518A9182A665EBF004EBB52 /* TicketRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketRow.swift; sourceTree = "<group>"; };
 		9518A91A2A665FB8004EBB52 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		9518A91D2A667F9B004EBB52 /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
+		958EFEF12A67B498005F6DC8 /* EmptyTicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTicketView.swift; sourceTree = "<group>"; };
+		958EFEF32A68EA54005F6DC8 /* PinVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinVIew.swift; sourceTree = "<group>"; };
+		958EFEF52A68F179005F6DC8 /* ScanMRTPayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanMRTPayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +135,9 @@
 				38B86E122A61319400686287 /* ContentView.swift */,
 				9518A91A2A665FB8004EBB52 /* Ticket.swift */,
 				9518A9132A664EF4004EBB52 /* TicketsView.swift */,
+				958EFEF32A68EA54005F6DC8 /* PinVIew.swift */,
+				958EFEF12A67B498005F6DC8 /* EmptyTicketView.swift */,
+				958EFEF52A68F179005F6DC8 /* ScanMRTPayView.swift */,
 				9518A9162A665E91004EBB52 /* TicketList.swift */,
 				9518A9182A665EBF004EBB52 /* TicketRow.swift */,
 				9518A91D2A667F9B004EBB52 /* QRView.swift */,
@@ -262,9 +271,12 @@
 				9518A9142A664EF4004EBB52 /* TicketsView.swift in Sources */,
 				9518A91C2A665FB8004EBB52 /* Ticket.swift in Sources */,
 				9518A9192A665EBF004EBB52 /* TicketRow.swift in Sources */,
+				958EFEF42A68EA54005F6DC8 /* PinVIew.swift in Sources */,
+				958EFEF62A68F179005F6DC8 /* ScanMRTPayView.swift in Sources */,
 				38B86E132A61319400686287 /* ContentView.swift in Sources */,
 				38B86E112A61319400686287 /* NanoChallenge3App.swift in Sources */,
 				9518A9172A665E91004EBB52 /* TicketList.swift in Sources */,
+				958EFEF22A67B498005F6DC8 /* EmptyTicketView.swift in Sources */,
 				9518A91F2A667F9B004EBB52 /* QRView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

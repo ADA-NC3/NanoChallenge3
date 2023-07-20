@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct QRView: View {
+    var qrCode = ["QR_IN", "QR_OUT"]
     var body: some View {
-        VStack {
-            Text("Scan In QR").font(.title3).fontWeight(.medium)
-            Image("QR_IN").resizable().frame(width:120, height: 120)
-            Text("Enter Blok M Station")
+        NavigationView{
+            ScrollView{
+                if true {
+                    VStack {
+                        Text("Scan In QR").font(.title3).fontWeight(.medium)
+                        Image("\(qrCode[0])").resizable().frame(width:120, height: 120)
+                        Text("Enter Blok M Station").padding(.top)
+                        
+                    }
+                }else{
+                    
+                }
+            }
         }
     }
 }
