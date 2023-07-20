@@ -22,24 +22,28 @@ struct MyTicketView: View {
     
     var body: some View {
         NavigationStack {
-            VStack(alignment: .center) {
-                pickerView
-                    .padding(.horizontal, 37)
-                
-                if vm.selectedPicker == 0 {
-                    ForEach(Array(vm.activeTickets.enumerated()), id: \.element.id) { (index, ticket) in
-                        TicketCardView(model: ticket)
+            ZStack {
+                Color.white
+                VStack(alignment: .center) {
+                    pickerView
+                        .padding(.horizontal, 37)
+                    
+                    if vm.selectedPicker == 0 {
+                        ForEach(Array(vm.activeTickets.enumerated()), id: \.element.id) { (index, ticket) in
+                            TicketCardView(model: ticket)
+                                .padding(.bottom)
+                        }
+                        
+                    } else {
+                        TicketCardView(model: vm.historyTicket)
                             .padding(.bottom)
                     }
                     
-                } else {
-                    TicketCardView(model: vm.historyTicket)
-                        .padding(.bottom)
+                    Spacer()
                 }
-                
-                Spacer()
+                .padding(.horizontal, 25)
+                .foregroundColor(.black)
             }
-            .padding(.horizontal, 25)
         }
         .overlay {
             titleTicketView
