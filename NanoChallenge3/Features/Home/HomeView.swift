@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct HomeView: View {
-    
     enum TicketPayment: String, CaseIterable, Identifiable {
         case mrtPay, oneWay, roundTrip
         var id: Self { self }
@@ -168,3 +167,7 @@ struct HomeView_Previews: PreviewProvider {
     }
 }
 
+enum TicketPayment: String, CaseIterable, Identifiable {
+    case mrtPay, oneWay, roundTrip
+    var id: Self { self }
+}

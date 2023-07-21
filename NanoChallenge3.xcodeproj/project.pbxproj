@@ -33,6 +33,7 @@
 		4C17FDB72A67CA0E008CB998 /* MyTicketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C17FDB62A67CA0E008CB998 /* MyTicketModel.swift */; };
 		4C17FDBA2A67CD67008CB998 /* Array+Extemsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C17FDB92A67CD67008CB998 /* Array+Extemsion.swift */; };
 		4C17FDBC2A67E93D008CB998 /* DetailTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C17FDBB2A67E93D008CB998 /* DetailTicketView.swift */; };
+		4C82BE6E2A6969F60030C29F /* Line+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C82BE6D2A6969F60030C29F /* Line+Extension.swift */; };
 		4CE5EC572A65822200A7A7FA /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE5EC562A65822200A7A7FA /* LocationManager.swift */; };
 		A95790322A666154002CCCC4 /* StationPickerModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95790312A666154002CCCC4 /* StationPickerModalView.swift */; };
 		A9D377822A65770F0092D4B4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D377812A65770F0092D4B4 /* HomeView.swift */; };
@@ -98,6 +99,7 @@
 		4C17FDB62A67CA0E008CB998 /* MyTicketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketModel.swift; sourceTree = "<group>"; };
 		4C17FDB92A67CD67008CB998 /* Array+Extemsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extemsion.swift"; sourceTree = "<group>"; };
 		4C17FDBB2A67E93D008CB998 /* DetailTicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTicketView.swift; sourceTree = "<group>"; };
+		4C82BE6D2A6969F60030C29F /* Line+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Line+Extension.swift"; sourceTree = "<group>"; };
 		4CE5EC562A65822200A7A7FA /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		A95790312A666154002CCCC4 /* StationPickerModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationPickerModalView.swift; sourceTree = "<group>"; };
 		A9D377812A65770F0092D4B4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -188,6 +190,40 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		4C17FDAA2A66968A008CB998 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4C17FDA82A6688DF008CB998 /* LocationDataServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4C17FDAB2A6696C3008CB998 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C17FDA62A6684B7008CB998 /* StationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4C17FDAC2A669705008CB998 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4CE5EC562A65822200A7A7FA /* LocationManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4C17FDAD2A66C010008CB998 /* MyTicket */ = {
+      isa = PBXGroup;
+      children = (
+              4C17FDB82A67CA14008CB998 /* MyTicketModel */,
+              4C17FDB12A66C053008CB998 /* MyTicketViewModel */,
+              4C17FDB02A66C048008CB998 /* MyTicketView */,
+      );
+      path = MyTicket;
+      sourceTree = "<group>";
+    };
 		38C7D8932A691E66003B4317 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +260,14 @@
 				3F47D5512A66335A006BF185 /* ChoosePayment.swift */,
 			);
 			path = ComponentPayment;
+			sourceTree = "<group>";
+		};
+    4C17FDB82A67CA14008CB998 /* MyTicketModel */ = {
+			isa = PBXGroup;
+			children = (
+				4C17FDB62A67CA0E008CB998 /* MyTicketModel.swift */,
+			);
+			path = MyTicketModel;
 			sourceTree = "<group>";
 		};
 		3F47D5642A682CD2006BF185 /* ModelPayment */ = {
@@ -346,6 +390,7 @@
 			children = (
 				A9CFE65B2A65BD960080D84D /* Theme */,
 				4C17FDB92A67CD67008CB998 /* Array+Extemsion.swift */,
+				4C82BE6D2A6969F60030C29F /* Line+Extension.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -463,6 +508,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C17FDB72A67CA0E008CB998 /* MyTicketModel.swift in Sources */,
+				A95790322A666154002CCCC4 /* StationPickerModalView.swift in Sources */,
+				4C17FDB32A66CA7E008CB998 /* TicketCardView.swift in Sources */,
+				4C82BE6E2A6969F60030C29F /* Line+Extension.swift in Sources */,
 				38C7D8952A691E7B003B4317 /* MRTStation.swift in Sources */,
 				4C17FDB72A67CA0E008CB998 /* MyTicketModel.swift in Sources */,
 				A95790322A666154002CCCC4 /* StationPickerModalView.swift in Sources */,
