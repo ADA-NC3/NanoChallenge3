@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct OneWayView: View {
-    
-    @State var chooseStationSheet = false
-    @StateObject var vm = HomeViewModel()
+    @State var departureStationSheet = false
+    @State var destinationStationSheet = false
+    @StateObject var vm: HomeViewModel
     
     var body: some View {
         VStack(alignment: .leading){
@@ -25,16 +25,17 @@ struct OneWayView: View {
                         
                         HStack{
                             Image("Train1")
-                            Text("\(vm.selectedDepartureStation?.name ?? "Blok M")")
+                            Text("\(vm.selectedDepartureStation?.name ?? "")")
                                 .font(.body)
                                 .foregroundColor(.black)
                             Spacer()
                         }
                         .onTapGesture {
-                            chooseStationSheet = true
+                            departureStationSheet = true
                         }
-                        .sheet(isPresented: $chooseStationSheet) {
-                            StationPickerModalView(stationType: "Departure")
+                        .sheet(isPresented: $departureStationSheet) {
+                            StationPickerModalView(sheetOpenStatus: $departureStationSheet, vm: vm, stationType: "Departure")
+                                .preferredColorScheme(.light)
                         }
                         Divider()
                             .overlay(Color(uiColor: .gray2_base))
@@ -49,16 +50,17 @@ struct OneWayView: View {
                         
                         HStack{
                             Image("Train2")
-                            Text("\(vm.selectedDestinationStation?.name ?? "Lebak Bulus")")
+                            Text("\(vm.selectedDestinationStation?.name ?? "")")
                                 .font(.body)
                                 .foregroundColor(.black)
                             Spacer()
                         }
                         .onTapGesture {
-                            chooseStationSheet = true
+                            destinationStationSheet = true
                         }
-                        .sheet(isPresented: $chooseStationSheet) {
-                            StationPickerModalView(stationType: "Destination")
+                        .sheet(isPresented: $destinationStationSheet) {
+                            StationPickerModalView(sheetOpenStatus: $destinationStationSheet, vm: vm, stationType: "Destination")
+                                .preferredColorScheme(.light)
                         }
                         Divider()
                             .overlay(Color(uiColor: .gray2_base))
@@ -70,8 +72,6 @@ struct OneWayView: View {
                     .foregroundColor(Color(uiColor: .blue_base))
                     .onTapGesture {
                         vm.switchStation()
-                        print(vm.selectedDepartureStation)
-                        print("al")
                     }
             }
             
@@ -106,6 +106,6 @@ struct OneWayView: View {
 
 struct OneWayView_Previews: PreviewProvider {
     static var previews: some View {
-        OneWayView()
+        OneWayView(vm: HomeViewModel())
     }
 }

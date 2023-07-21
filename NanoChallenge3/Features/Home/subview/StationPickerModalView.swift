@@ -6,55 +6,52 @@
 //
 
 import SwiftUI
+import Speech
 
 struct StationPickerModalView: View {
     
     @State var searchStation = ""
-    @StateObject var vm = HomeViewModel()
+    @Binding var sheetOpenStatus: Bool
+    @StateObject var mrtStation = MRTStation()
+    @StateObject var vm: HomeViewModel
     var stationType: String
     
     var body: some View {
         NavigationView {
             List {
                 ForEach(vm.searchStationFilter(searchText: searchStation), id: \.name) { station in
-                    Text(station.name)
+                    StationListView(station: station.name)
                         .listRowSeparator(.hidden)
-                        .listRowInsets(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+                        .listSectionSeparator(.hidden)
+                        .listRowInsets(EdgeInsets())
                         .onTapGesture {
-                            //TODO: MASIH BELOM KE GANTI OPTIONNYA DI HALAMAN HOME
-                            if stationType == "Departure"{
-                                vm.selectedDepartureStation = station
-                                print("a")
-                            }else if stationType == "Destination"{
-                                vm.selectedDestinationStation = station
-                                print("b")
-                            }else {
-                                print("ERROR: UNRECOGNIZED STATION_TYPE")
-                            }
+                            vm.pickStation(type: stationType, stationSelected: station)
+                            sheetOpenStatus = false
                         }
-                }   
+                }
             }
-            .searchable(text: $searchStation)
+            .searchable(text: $searchStation, placement: .navigationBarDrawer(displayMode: .always))
             .listStyle(.plain)
             .toolbar {
                 Button {
-                    
+                    sheetOpenStatus = false
                 } label: {
                     Text("Cancel")
                         .foregroundColor(Color(UIColor.blue_base))
                 }
-
+                
             }
             .navigationTitle("\(stationType) Station")
             .navigationBarTitleDisplayMode(.inline)
             
         }
+        .padding(.top, 10)
         .presentationDragIndicator(.visible)
     }
 }
 
 struct StationPickerModalView_Previews: PreviewProvider {
     static var previews: some View {
-        StationPickerModalView(stationType: "Departure")
+        StationPickerModalView(sheetOpenStatus: .constant(true), vm: HomeViewModel(), stationType: "Departure")
     }
 }

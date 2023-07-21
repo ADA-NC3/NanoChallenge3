@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct HomeView: View {
+    enum TicketPayment: String, CaseIterable, Identifiable {
+        case mrtPay, oneWay, roundTrip
+        var id: Self { self }
+    }
     
-    
-
+    @StateObject var mrtStation = MRTStation()
     @State private var selectedTicketPayment: TicketPayment = .mrtPay
-    @StateObject private var vm = HomeViewModel()
-    @StateObject private var locationManager = LocationManager()
+    @StateObject var vm = HomeViewModel()
     
     init() {
         //CUSTOMIZE PICKER THEME
@@ -21,12 +23,12 @@ struct HomeView: View {
         UISegmentedControl.appearance().setDividerImage(UIImage(), forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
         UISegmentedControl.appearance().selectedSegmentTintColor = UIColor.blue_base
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white_base], for: .selected)
-        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.gray_base], for: .normal)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.pickerTextColor], for: .normal)
     }
     
     var body: some View {
         ZStack{
-            Color(.white)
+            Color(.white).ignoresSafeArea()
             VStack{
                 HStack{
                     VStack(alignment: .leading){
@@ -44,12 +46,9 @@ struct HomeView: View {
                             Image("Location")
                                 .padding(.trailing, -5)
                             //TODO: SET UP NEAREST STATION
-                            if let userLocation = locationManager.location?.coordinate,
-                               let nearestLocation = vm.findNearestStation(userLocation: userLocation) {
-                                Text("Nearest Station **\(nearestLocation.name)**")
-                                    .font(.footnote)
-                                    .foregroundColor(Color(red: 223/255, green: 223/255, blue: 223/255))
-                            }
+                            Text("Nearest Station **\("Blok M")**")
+                                .font(.footnote)
+                                .foregroundColor(Color(red: 223/255, green: 223/255, blue: 223/255))
                         }
                         .padding(.top, 4)
                     }
@@ -71,13 +70,14 @@ struct HomeView: View {
                     .padding(.top, 20)
                     .pickerStyle(.segmented)
                     
+                    
                     VStack{
                         if selectedTicketPayment == TicketPayment.mrtPay {
                             MRTPayView()
                         } else if selectedTicketPayment == TicketPayment.oneWay{
-                            OneWayView()
+                            OneWayView(vm: vm)
                         } else if selectedTicketPayment == TicketPayment.roundTrip{
-                            RoundTripView()
+                            RoundTripView(vm: vm)
                         }
                     }
                     .padding(.horizontal, 20)
@@ -91,12 +91,74 @@ struct HomeView: View {
                 .cornerRadius(20)
                 .padding(.top, -150)
                 .padding(.horizontal, 25)
+                
+                VStack {
+                    HStack{
+                        Text("Nearest Arrival")
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.black)
+                        Spacer()
+                        Button{
+                            
+                        } label: {
+                            Text("See More")
+                                .foregroundColor(Color(uiColor: .blue_base))
+                        }
+                    }
+                    HStack{
+                        HStack{
+                            Image("nearestArrivalDot")
+                            VStack(alignment: .leading) {
+                                Text("To Bundaran HI")
+                                    .font(.subheadline)
+                                    .foregroundColor(.black)
+                                Text("09:47")
+                                    .foregroundColor(Color(uiColor: .blue_base))
+                                    .font(.title)
+                                    .fontWeight(.bold)
+                                Text("09:52")
+                                    .font(.body)
+                                    .foregroundColor(Color(uiColor: .gray_base))
+                            }
+                        }
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 20)
+                        
+                        HStack{
+                            Image("nearestArrivalDot")
+                            VStack(alignment: .leading) {
+                                Text("To Lb. Bulus")
+                                    .font(.subheadline)
+                                    .foregroundColor(.black)
+                                Text("09:45")
+                                    .foregroundColor(Color(uiColor: .blue_base))
+                                    .font(.title)
+                                    .fontWeight(.bold)
+                                Text("09:50")
+                                    .font(.body)
+                                    .foregroundColor(Color(uiColor: .gray_base))
+                            }
+                        }
+                        .padding(.vertical, 20)
+                        Spacer()
+                    }
+                    .background(.white)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 20)
+                            .stroke(Color(UIColor.gray2_base), lineWidth: 1)
+                    )
+                }
+                .padding(.horizontal, 25)
+                .padding(.vertical, 30)
                 Spacer()
             }
             
         }
         .ignoresSafeArea()
+        .preferredColorScheme(.dark)
     }
+    
 }
 
 struct HomeView_Previews: PreviewProvider {

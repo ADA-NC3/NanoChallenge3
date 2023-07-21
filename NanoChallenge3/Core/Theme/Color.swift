@@ -14,4 +14,5 @@ extension UIColor{
     static var green_base: UIColor{ return UIColor(red: 52/255, green: 181/255, blue: 89/255, alpha: 1)}
     static var gray_base: UIColor{ return UIColor(red: 170/255, green: 170/255, blue: 170/255, alpha: 1)}
     static var gray2_base: UIColor{ return UIColor(red: 241/255, green: 241/255, blue: 241/255, alpha: 1)}
+    static var pickerTextColor: UIColor{ return UIColor(red: 160/255, green: 160/255, blue: 160/255, alpha: 1)}
 }
