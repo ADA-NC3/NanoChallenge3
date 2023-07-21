@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38A18BB82A6B058D00EB88E0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A18BB72A6B058D00EB88E0 /* Profile.swift */; };
+		38A18BBA2A6B059E00EB88E0 /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A18BB92A6B059E00EB88E0 /* EditProfile.swift */; };
 		38B86DFF2A61319300686287 /* NanoChallenge3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B86DFE2A61319300686287 /* NanoChallenge3App.swift */; };
 		38B86E012A61319300686287 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B86E002A61319300686287 /* ContentView.swift */; };
 		38B86E032A61319400686287 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B86E022A61319400686287 /* Assets.xcassets */; };
@@ -74,6 +76,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		38A18BB72A6B058D00EB88E0 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		38A18BB92A6B059E00EB88E0 /* EditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
 		38B86DFB2A61319300686287 /* NanoChallenge3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoChallenge3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38B86DFE2A61319300686287 /* NanoChallenge3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoChallenge3App.swift; sourceTree = "<group>"; };
 		38B86E002A61319300686287 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -133,6 +137,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38A18BB62A6B057D00EB88E0 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				38A18BB72A6B058D00EB88E0 /* Profile.swift */,
+				38A18BB92A6B059E00EB88E0 /* EditProfile.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		38B86DF22A61319300686287 = {
 			isa = PBXGroup;
 			children = (
@@ -328,6 +341,7 @@
 		A9D3777C2A6576BA0092D4B4 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				38A18BB62A6B057D00EB88E0 /* Profile */,
 				4C17FDAD2A66C010008CB998 /* MyTicket */,
 				A9D3777D2A6576C80092D4B4 /* Home */,
 			);
@@ -503,9 +517,11 @@
 				3F47D5612A682BB6006BF185 /* PaymentFailedView.swift in Sources */,
 				3F47D54D2A662DA7006BF185 /* PaymentMethodView.swift in Sources */,
 				4CE5EC572A65822200A7A7FA /* LocationManager.swift in Sources */,
+				38A18BB82A6B058D00EB88E0 /* Profile.swift in Sources */,
 				4C17FDA72A6684B7008CB998 /* StationModel.swift in Sources */,
 				4C17FDA92A6688DF008CB998 /* LocationDataServices.swift in Sources */,
 				A9D3778D2A658FBB0092D4B4 /* MRTPayView.swift in Sources */,
+				38A18BBA2A6B059E00EB88E0 /* EditProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

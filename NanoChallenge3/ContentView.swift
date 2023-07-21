@@ -28,14 +28,14 @@ struct ContentView: View {
                         }
                     }
                 
-//                ProfileView()
-//                    .tabItem{
-//                        Label {
-//                            Text("Profile")
-//                        } icon: {
-//                            Image(systemName: "person.fill")
-//                        }
-//                    }
+                Profile()
+                    .tabItem{
+                        Label {
+                            Text("Profile")
+                        } icon: {
+                            Image(systemName: "person.fill")
+                        }
+                    }
             }
             .accentColor(Color("blueBase"))
     }
