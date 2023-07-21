@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct NanoChallenge3_Watch_AppApp: App {
-    var body: some Scene {
-        WindowGroup {
-            TicketsView()
+    @StateObject var router = Router()
+        var body: some Scene {
+            WindowGroup {
+                ContentView()
+                    .environmentObject(router)
+            }
         }
-    }
 }

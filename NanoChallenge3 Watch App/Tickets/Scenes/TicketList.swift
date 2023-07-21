@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TicketList: View {
     var times: [String]
-    
+    @EnvironmentObject var router: Router
     var body: some View {
         NavigationView {
             List {
