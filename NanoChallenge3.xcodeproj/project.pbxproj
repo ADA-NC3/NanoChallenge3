@@ -18,6 +18,8 @@
 		38B86E182A61319500686287 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B86E172A61319500686287 /* Preview Assets.xcassets */; };
 		38C7D8952A691E7B003B4317 /* MRTStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C7D8942A691E7B003B4317 /* MRTStation.swift */; };
 		38C7D8972A691EB3003B4317 /* StationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C7D8962A691EB3003B4317 /* StationListView.swift */; };
+		38E378B22A6A9132006FCC0B /* PinMRTPayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E378B12A6A9132006FCC0B /* PinMRTPayView.swift */; };
+		38E378B42A6A9151006FCC0B /* QRMRTPayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E378B32A6A9151006FCC0B /* QRMRTPayView.swift */; };
 		3F47D54D2A662DA7006BF185 /* PaymentMethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F47D54C2A662DA7006BF185 /* PaymentMethodView.swift */; };
 		3F47D5502A662ECE006BF185 /* HeaderPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F47D54F2A662ECE006BF185 /* HeaderPayment.swift */; };
 		3F47D5522A66335A006BF185 /* ChoosePayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F47D5512A66335A006BF185 /* ChoosePayment.swift */; };
@@ -84,6 +86,8 @@
 		38B86E172A61319500686287 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		38C7D8942A691E7B003B4317 /* MRTStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRTStation.swift; sourceTree = "<group>"; };
 		38C7D8962A691EB3003B4317 /* StationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationListView.swift; sourceTree = "<group>"; };
+		38E378B12A6A9132006FCC0B /* PinMRTPayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PinMRTPayView.swift; path = ../../../../../PinMRTPayView.swift; sourceTree = "<group>"; };
+		38E378B32A6A9151006FCC0B /* QRMRTPayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRMRTPayView.swift; sourceTree = "<group>"; };
 		3F47D54C2A662DA7006BF185 /* PaymentMethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodView.swift; sourceTree = "<group>"; };
 		3F47D54F2A662ECE006BF185 /* HeaderPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderPayment.swift; sourceTree = "<group>"; };
 		3F47D5512A66335A006BF185 /* ChoosePayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePayment.swift; sourceTree = "<group>"; };
@@ -190,40 +194,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		4C17FDAA2A66968A008CB998 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				4C17FDA82A6688DF008CB998 /* LocationDataServices.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		4C17FDAB2A6696C3008CB998 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				4C17FDA62A6684B7008CB998 /* StationModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		4C17FDAC2A669705008CB998 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				4CE5EC562A65822200A7A7FA /* LocationManager.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
-		4C17FDAD2A66C010008CB998 /* MyTicket */ = {
-      isa = PBXGroup;
-      children = (
-              4C17FDB82A67CA14008CB998 /* MyTicketModel */,
-              4C17FDB12A66C053008CB998 /* MyTicketViewModel */,
-              4C17FDB02A66C048008CB998 /* MyTicketView */,
-      );
-      path = MyTicket;
-      sourceTree = "<group>";
-    };
 		38C7D8932A691E66003B4317 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,14 +230,6 @@
 				3F47D5512A66335A006BF185 /* ChoosePayment.swift */,
 			);
 			path = ComponentPayment;
-			sourceTree = "<group>";
-		};
-    4C17FDB82A67CA14008CB998 /* MyTicketModel */ = {
-			isa = PBXGroup;
-			children = (
-				4C17FDB62A67CA0E008CB998 /* MyTicketModel.swift */,
-			);
-			path = MyTicketModel;
 			sourceTree = "<group>";
 		};
 		3F47D5642A682CD2006BF185 /* ModelPayment */ = {
@@ -376,6 +338,8 @@
 			isa = PBXGroup;
 			children = (
 				A9D377812A65770F0092D4B4 /* HomeView.swift */,
+				38E378B12A6A9132006FCC0B /* PinMRTPayView.swift */,
+				38E378B32A6A9151006FCC0B /* QRMRTPayView.swift */,
 				3F47D54E2A662DCA006BF185 /* PaymentMethod */,
 				A9D3778B2A658FA60092D4B4 /* subview */,
 				38C7D8932A691E66003B4317 /* Model */,
@@ -508,6 +472,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E378B22A6A9132006FCC0B /* PinMRTPayView.swift in Sources */,
 				4C17FDB72A67CA0E008CB998 /* MyTicketModel.swift in Sources */,
 				A95790322A666154002CCCC4 /* StationPickerModalView.swift in Sources */,
 				4C17FDB32A66CA7E008CB998 /* TicketCardView.swift in Sources */,
@@ -531,6 +496,7 @@
 				3F47D5502A662ECE006BF185 /* HeaderPayment.swift in Sources */,
 				3F47D55D2A668018006BF185 /* MockPaymentModel.swift in Sources */,
 				38B86DFF2A61319300686287 /* NanoChallenge3App.swift in Sources */,
+				38E378B42A6A9151006FCC0B /* QRMRTPayView.swift in Sources */,
 				3F47D55B2A667F3C006BF185 /* PayView.swift in Sources */,
 				3F47D55F2A668D9B006BF185 /* PaymentSuccessView.swift in Sources */,
 				3F47D5522A66335A006BF185 /* ChoosePayment.swift in Sources */,
