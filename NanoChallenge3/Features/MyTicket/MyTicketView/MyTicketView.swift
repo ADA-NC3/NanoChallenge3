@@ -12,7 +12,7 @@ struct MyTicketView: View {
     @StateObject private var vm = MyTicketViewModel()
     
     init() {
-        // MARK: Cutome Picker
+        // MARK: Custom Picker
         UISegmentedControl.appearance().backgroundColor = .gray2_base
         UISegmentedControl.appearance().setDividerImage(UIImage(), forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
         UISegmentedControl.appearance().selectedSegmentTintColor = UIColor.blue_base
@@ -22,24 +22,11 @@ struct MyTicketView: View {
     
     var body: some View {
         NavigationStack {
-            VStack(alignment: .center) {
-                pickerView
-                    .padding(.horizontal, 37)
-                
-                if vm.selectedPicker == 0 {
-                    ForEach(Array(vm.activeTickets.enumerated()), id: \.element.id) { (index, ticket) in
-                        TicketCardView(model: ticket)
-                            .padding(.bottom)
-                    }
-                    
-                } else {
-                    TicketCardView(model: vm.historyTicket)
-                        .padding(.bottom)
-                }
-                
-                Spacer()
+            if vm.isPurchased {
+                purchasedView
+            } else {
+                notPurchasedView
             }
-            .padding(.horizontal, 25)
         }
         .overlay {
             titleTicketView
@@ -56,14 +43,52 @@ struct MyTicketView_Previews: PreviewProvider {
 
 extension MyTicketView {
     
-    private var pickerView: some View {
-        Picker("My Ticket", selection: $vm.selectedPicker) {
-            Text("Active Ticket").tag(0)
-            Text("History").tag(1)
+    private var purchasedView: some View {
+        VStack(alignment: .center) {
+            Picker("My Ticket", selection: $vm.selectedPicker) {
+                Text("Active Ticket").tag(0)
+                Text("History").tag(1)
+            }
+            .padding(EdgeInsets(top: 62, leading: 37, bottom: 32, trailing: 37))
+            .pickerStyle(.segmented)
+            
+            if vm.selectedPicker == 0 {
+                ForEach(Array(vm.activeTickets.enumerated()), id: \.element.id) { (index, ticket) in
+                    TicketCardView(model: ticket)
+                        .padding(.bottom)
+                }
+                
+            } else {
+                TicketCardView(model: vm.historyTicket)
+                    .padding(.bottom)
+                    .disabled(true)
+            }
+            
+            Spacer()
         }
-        .padding(.top, 62)
-        .padding(.bottom, 32)
-        .pickerStyle(.segmented)
+        .padding(.horizontal, 25)
+    }
+    
+    private var notPurchasedView: some View {
+        VStack {
+            Image("mrtnangis")
+                .padding(.bottom, 10)
+            
+            Text("You haven't purchase any ticket")
+            
+            Text("Please buy it first")
+                .padding(.bottom, 20)
+            
+            NavigationLink {
+                HomeView()
+            } label: {
+                Text("Purchase Ticket")
+                    .frame(width: 300, height: 45)
+                    .foregroundColor(.white)
+                    .background(Color(uiColor: .blue_base))
+                    .cornerRadius(12)
+            }
+        }
     }
     
     private var titleTicketView: some View {
