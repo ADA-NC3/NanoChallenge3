@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ScanMRTPayView: View {
-    
+   
     var body: some View {
         NavigationView{
             ScrollView{
@@ -16,8 +16,7 @@ struct ScanMRTPayView: View {
                     VStack {
                         Text("Scan MRTPay").font(.title3).fontWeight(.semibold)
                         Image("QR_IN").resizable().frame(width:120, height: 120)
-                        
-                        
+                        Text("Scan MRTPay").font(.system(size:12)).foregroundColor(.gray)
                     }
                 }else{
                     

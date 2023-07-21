@@ -22,10 +22,12 @@ struct EmptyTicketView: View {
                     }.scenePadding(.horizontal)
                     
                  
-                       
-                    NavigationLink(destination: ScanMRTPayView()) {
+
+                    NavigationLink(destination: PinView()) {
                             Text("MRT Pay")
-                    }.buttonStyle(BorderedButtonStyle(tint: Color.green.opacity(2))).padding(.bottom)
+                            .foregroundColor(.black)
+                            .fontWeight(.medium)
+                    }.buttonStyle(BorderedProminentButtonStyle()).tint(Color.green).clipShape(Capsule())
                         
                     
 

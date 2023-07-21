@@ -20,11 +20,7 @@ struct TicketsView: View {
 
 struct TicketsView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
                 TicketsView()
-            }
-        .navigationTitle("Tickets")
-                
     }
 }
 //"14.05", "14.12","14.13","14.14","14.15"

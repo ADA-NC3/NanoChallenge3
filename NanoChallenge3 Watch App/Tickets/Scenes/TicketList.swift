@@ -29,9 +29,10 @@ struct TicketListHeader: View {
     var body: some View {
         HStack {
             Text("Trips")
-                .font(.system(size: 31))
+                .font(.system(size: 25))
                 .fontWeight(.medium)
                 .foregroundColor(Color(red: 10 / 255, green: 132 / 255, blue: 255 / 255))
+                .padding()
             
             Spacer()
         }

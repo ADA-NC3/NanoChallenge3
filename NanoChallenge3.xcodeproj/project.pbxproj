@@ -24,8 +24,11 @@
 		9518A91E2A667F9B004EBB52 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518A91D2A667F9B004EBB52 /* QRView.swift */; };
 		9518A91F2A667F9B004EBB52 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518A91D2A667F9B004EBB52 /* QRView.swift */; };
 		958EFEF22A67B498005F6DC8 /* EmptyTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958EFEF12A67B498005F6DC8 /* EmptyTicketView.swift */; };
-		958EFEF42A68EA54005F6DC8 /* PinVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958EFEF32A68EA54005F6DC8 /* PinVIew.swift */; };
+		958EFEF42A68EA54005F6DC8 /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958EFEF32A68EA54005F6DC8 /* PinView.swift */; };
 		958EFEF62A68F179005F6DC8 /* ScanMRTPayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958EFEF52A68F179005F6DC8 /* ScanMRTPayView.swift */; };
+		958EFEF82A69185F005F6DC8 /* ValidateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958EFEF72A69185F005F6DC8 /* ValidateView.swift */; };
+		958EFEFD2A6927A1005F6DC8 /* QRGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958EFEFC2A6927A1005F6DC8 /* QRGeneratorView.swift */; };
+		958EFF042A693737005F6DC8 /* ScanSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958EFF032A693737005F6DC8 /* ScanSuccessView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,8 +72,11 @@
 		9518A91A2A665FB8004EBB52 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		9518A91D2A667F9B004EBB52 /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
 		958EFEF12A67B498005F6DC8 /* EmptyTicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTicketView.swift; sourceTree = "<group>"; };
-		958EFEF32A68EA54005F6DC8 /* PinVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinVIew.swift; sourceTree = "<group>"; };
+		958EFEF32A68EA54005F6DC8 /* PinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
 		958EFEF52A68F179005F6DC8 /* ScanMRTPayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanMRTPayView.swift; sourceTree = "<group>"; };
+		958EFEF72A69185F005F6DC8 /* ValidateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateView.swift; sourceTree = "<group>"; };
+		958EFEFC2A6927A1005F6DC8 /* QRGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGeneratorView.swift; sourceTree = "<group>"; };
+		958EFF032A693737005F6DC8 /* ScanSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanSuccessView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,18 +137,17 @@
 		38B86E0F2A61319400686287 /* NanoChallenge3 Watch App */ = {
 			isa = PBXGroup;
 			children = (
-				38B86E102A61319400686287 /* NanoChallenge3App.swift */,
+				958EFEFE2A69331A005F6DC8 /* Modifier */,
 				38B86E122A61319400686287 /* ContentView.swift */,
+				38B86E102A61319400686287 /* NanoChallenge3App.swift */,
 				9518A91A2A665FB8004EBB52 /* Ticket.swift */,
-				9518A9132A664EF4004EBB52 /* TicketsView.swift */,
-				958EFEF32A68EA54005F6DC8 /* PinVIew.swift */,
-				958EFEF12A67B498005F6DC8 /* EmptyTicketView.swift */,
-				958EFEF52A68F179005F6DC8 /* ScanMRTPayView.swift */,
-				9518A9162A665E91004EBB52 /* TicketList.swift */,
-				9518A9182A665EBF004EBB52 /* TicketRow.swift */,
-				9518A91D2A667F9B004EBB52 /* QRView.swift */,
+				958EFEF32A68EA54005F6DC8 /* PinView.swift */,
+				958EFEF72A69185F005F6DC8 /* ValidateView.swift */,
+				958EFF052A693749005F6DC8 /* QR */,
+				958EFF062A693781005F6DC8 /* Tickets */,
 				38B86E142A61319500686287 /* Assets.xcassets */,
 				38B86E162A61319500686287 /* Preview Content */,
+				958EFEFC2A6927A1005F6DC8 /* QRGeneratorView.swift */,
 			);
 			path = "NanoChallenge3 Watch App";
 			sourceTree = "<group>";
@@ -153,6 +158,42 @@
 				38B86E172A61319500686287 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		958EFEFE2A69331A005F6DC8 /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modifier;
+			sourceTree = "<group>";
+		};
+		958EFF052A693749005F6DC8 /* QR */ = {
+			isa = PBXGroup;
+			children = (
+				9518A91D2A667F9B004EBB52 /* QRView.swift */,
+				958EFF032A693737005F6DC8 /* ScanSuccessView.swift */,
+				958EFEF52A68F179005F6DC8 /* ScanMRTPayView.swift */,
+			);
+			path = QR;
+			sourceTree = "<group>";
+		};
+		958EFF062A693781005F6DC8 /* Tickets */ = {
+			isa = PBXGroup;
+			children = (
+				9518A9132A664EF4004EBB52 /* TicketsView.swift */,
+				958EFF072A69378F005F6DC8 /* Scenes */,
+			);
+			path = Tickets;
+			sourceTree = "<group>";
+		};
+		958EFF072A69378F005F6DC8 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				9518A9162A665E91004EBB52 /* TicketList.swift */,
+				958EFEF12A67B498005F6DC8 /* EmptyTicketView.swift */,
+				9518A9182A665EBF004EBB52 /* TicketRow.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +214,8 @@
 				38B86E0E2A61319400686287 /* PBXTargetDependency */,
 			);
 			name = NanoChallenge3;
+			packageProductDependencies = (
+			);
 			productName = NanoChallenge3;
 			productReference = 38B86DFB2A61319300686287 /* NanoChallenge3.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +264,8 @@
 				Base,
 			);
 			mainGroup = 38B86DF22A61319300686287;
+			packageReferences = (
+			);
 			productRefGroup = 38B86DFC2A61319300686287 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -268,14 +313,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				958EFEF82A69185F005F6DC8 /* ValidateView.swift in Sources */,
 				9518A9142A664EF4004EBB52 /* TicketsView.swift in Sources */,
 				9518A91C2A665FB8004EBB52 /* Ticket.swift in Sources */,
 				9518A9192A665EBF004EBB52 /* TicketRow.swift in Sources */,
-				958EFEF42A68EA54005F6DC8 /* PinVIew.swift in Sources */,
+				958EFEF42A68EA54005F6DC8 /* PinView.swift in Sources */,
 				958EFEF62A68F179005F6DC8 /* ScanMRTPayView.swift in Sources */,
 				38B86E132A61319400686287 /* ContentView.swift in Sources */,
 				38B86E112A61319400686287 /* NanoChallenge3App.swift in Sources */,
+				958EFF042A693737005F6DC8 /* ScanSuccessView.swift in Sources */,
 				9518A9172A665E91004EBB52 /* TicketList.swift in Sources */,
+				958EFEFD2A6927A1005F6DC8 /* QRGeneratorView.swift in Sources */,
 				958EFEF22A67B498005F6DC8 /* EmptyTicketView.swift in Sources */,
 				9518A91F2A667F9B004EBB52 /* QRView.swift in Sources */,
 			);
@@ -409,7 +457,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NanoChallenge3 Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = UWJ26F79V5;
+				DEVELOPMENT_TEAM = LV6NHQHMXR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = NanoChallenge3;
@@ -439,7 +487,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NanoChallenge3 Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = UWJ26F79V5;
+				DEVELOPMENT_TEAM = LV6NHQHMXR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = NanoChallenge3;
@@ -471,7 +519,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NanoChallenge3/Preview Content\"";
-				DEVELOPMENT_TEAM = UWJ26F79V5;
+				DEVELOPMENT_TEAM = LV6NHQHMXR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = NanoChallenge3;
@@ -504,7 +552,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NanoChallenge3/Preview Content\"";
-				DEVELOPMENT_TEAM = UWJ26F79V5;
+				DEVELOPMENT_TEAM = LV6NHQHMXR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = NanoChallenge3;
