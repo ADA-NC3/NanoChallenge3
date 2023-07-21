@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MRTPayView: View {
+    @Binding var openPinPage: Bool
     var body: some View {
         HStack{
             VStack(alignment: .leading){
@@ -23,7 +24,7 @@ struct MRTPayView: View {
                 HStack{
                     Button {
                         //TODO: OPEN QR BUTTON ACTION
-                        
+                        openPinPage = true
                     } label: {
                         Image(systemName: "qrcode")
                             .font(.largeTitle)
@@ -72,6 +73,6 @@ struct MRTPayView: View {
 
 struct MRTPayView_Previews: PreviewProvider {
     static var previews: some View {
-        MRTPayView()
+        MRTPayView(openPinPage: .constant(true))
     }
 }
