@@ -15,6 +15,9 @@ struct PinMRTPayView: View {
     
     @FocusState private var checkoutInFocus: CheckoutFocusable?
     
+    @State var openQRPage = false
+    @Binding var openPinPage: Bool
+    
     var body: some View {
         
         let pin1 = Binding(
@@ -108,10 +111,13 @@ struct PinMRTPayView: View {
                             .onChange(of: mrtPayPIN4) { newValue in
                                 if newValue.count == 1 {
                                     //TODO: CHANGE PAGE
-                                    
+                                    openQRPage = true
                                 } else if newValue.count == 0 {
                                     checkoutInFocus = .form3
                                 }
+                            }
+                            .fullScreenCover(isPresented: $openQRPage) {
+                                QRMRTPayView(openQRPage: $openQRPage, openPinPage: $openPinPage)
                             }
                     }
                     .padding(.vertical, 10)
@@ -136,6 +142,6 @@ struct PinMRTPayView: View {
 
 struct PinMRTPayView_Previews: PreviewProvider {
     static var previews: some View {
-        PinMRTPayView()
+        PinMRTPayView(openPinPage: .constant(true))
     }
 }

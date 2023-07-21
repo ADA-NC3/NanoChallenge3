@@ -9,13 +9,11 @@ import SwiftUI
 
 struct QRMRTPayView: View {
     
-    init(){
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
-        UINavigationBar.appearance().backgroundColor = .blue_base
-    }
-    
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    @State private var timeRemaining = 300
+    @State private var timeRemaining = 3 * 60
+    @Binding var openQRPage: Bool
+    @Binding var openPinPage: Bool
+    
 
     var body: some View {
         NavigationView {
@@ -35,19 +33,40 @@ struct QRMRTPayView: View {
                     .onReceive(timer) { _ in
                         if timeRemaining > 0 {
                             timeRemaining -= 1
+                        } else {
+                            openPinPage = false
+                            openQRPage = false
                         }
                     }
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(.white)
+            .preferredColorScheme(.dark)
             .toolbarBackground(.visible, for: .navigationBar)
             .toolbarBackground(Color(uiColor: .blue_base), for: .navigationBar)
             .navigationTitle("MRTPay QR")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                                    Button {
+                                        openQRPage = false
+                                        openPinPage = false
+                                    } label: {
+                                        HStack {
+                                            Image(systemName: "chevron.backward")
+                                                .foregroundColor(.white)
+                                            Text("Back")
+                                                .foregroundColor(.white)
+                                        }
+                                    }
+                                }
+            }
         }
     }
 }
 
 struct QRMRTPayView_Previews: PreviewProvider {
     static var previews: some View {
-        QRMRTPayView()
+        QRMRTPayView(openQRPage: .constant(true), openPinPage: .constant(true))
     }
 }

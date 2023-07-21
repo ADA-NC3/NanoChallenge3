@@ -11,8 +11,8 @@ import SwiftUI
 struct NanoChallenge3App: App {
     var body: some Scene {
         WindowGroup {
-//            HomeView()
-            QRMRTPayView()
+            HomeView()
+//            QRMRTPayView()
         }
     }
 }
