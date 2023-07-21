@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct HomeView: View {
-    
     enum TicketPayment: String, CaseIterable, Identifiable {
         case mrtPay, oneWay, roundTrip
         var id: Self { self }
@@ -30,8 +29,39 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            ZStack{
-                Color(.white)
+          ZStack{
+              Color(.white).ignoresSafeArea()
+              VStack{
+                  HStack{
+                      VStack(alignment: .leading){
+                          //TODO: SET UP GREETINGS AND USER NAME
+                          Text("Good \(vm.generateGreeting()), \("Nabiel")!")
+                              .font(.title2)
+                              .foregroundColor(Color(uiColor: .white_base))
+                              .fontWeight(.semibold)
+                              .padding(.bottom, -5)
+                          Text("Lets find joy in every day with MRTJ.")
+                              .font(.subheadline)
+                              .foregroundColor(Color(uiColor: .white_base))
+                              .fontWeight(.regular)
+                          HStack{
+                              Image("Location")
+                                  .padding(.trailing, -5)
+                              //TODO: SET UP NEAREST STATION
+                              Text("Nearest Station **\("Blok M")**")
+                                  .font(.footnote)
+                                  .foregroundColor(Color(red: 223/255, green: 223/255, blue: 223/255))
+                          }
+                          .padding(.top, 4)
+                      }
+                      Spacer()
+                  }
+                  .padding(.top, 80)
+                  .padding(.bottom, 160)
+                  .padding(.horizontal, 25)
+                  .background(Color(UIColor.blue_base))
+                  .roundedCorner(40, corners: [.bottomLeft, .bottomRight])
+                
                 VStack{
                     HStack{
                         VStack(alignment: .leading){
@@ -174,3 +204,7 @@ struct HomeView_Previews: PreviewProvider {
     }
 }
 
+enum TicketPayment: String, CaseIterable, Identifiable {
+    case mrtPay, oneWay, roundTrip
+    var id: Self { self }
+}

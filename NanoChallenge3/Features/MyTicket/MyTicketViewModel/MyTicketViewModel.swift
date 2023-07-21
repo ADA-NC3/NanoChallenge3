@@ -11,14 +11,15 @@ import SwiftUI
 class MyTicketViewModel: ObservableObject {
     
     @Published var selectedPicker: Int = 0
+    @Published var isPurchased: Bool = false
     @Published var sheetDetailTicket: Bool = false
     
     @Published var activeTickets: [MyTicketModel] = [
-        MyTicketModel(departure: "Lb. Bulus", destination: "Blok M", date: "17 July 2023"),
-        MyTicketModel(departure: "Blok M", destination: "Lb. Bulus", date: "17 July 2023")
+        MyTicketModel(departure: "Cipete Raya", destination: "Sisingamangarajan", date: "18/7/2023 03.00 am"),
+        MyTicketModel(departure: "Blok A", destination: "Blok M", date: "18/7/2023 03.00 am")
     ]
     
-    @Published var historyTicket = MyTicketModel(departure: "Blok M", destination: "Lb. Bulus", date: "15 July 2023")
+    @Published var historyTicket = MyTicketModel(departure: "Cipete Raya", destination: "Sisingamangarajan", date: "18/7/2023 03.00 am")
     
     var tickets: [MyTicketModel] {
         return selectedPicker == 0 ? activeTickets : [historyTicket]
