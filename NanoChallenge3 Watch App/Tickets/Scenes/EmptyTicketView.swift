@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct EmptyTicketView: View {
+
     @EnvironmentObject var router: Router
+    
+    //Debugging Router
     @State var path: [Int] = []
     @State var count: Int = 0
+    
+    //Placeholders
+    //"14.05", "14.12","14.13","14.14","14.15"
+    //Bisa diganti ke list of tickets yg udh kebeli
+    @State var tickets: [String] = ["14.25", "14.30", "14.35"]
+    
     var body: some View {
         NavigationStack(path: $router.path){
             ScrollView{
@@ -25,7 +34,7 @@ struct EmptyTicketView: View {
                 
                 HStack {
                     Text("MRT Pay")
-                        .font(.caption)
+                        .font(.headline)
                         .fontWeight(.medium)
                     Spacer()
                 }.scenePadding(.horizontal)
@@ -41,14 +50,19 @@ struct EmptyTicketView: View {
                     case 1:
                         PasswordView().environmentObject(router)
                     case 2:
-                        ScanSuccessView().environmentObject(router)
+                        ScanSuccessView(isMRTPay: true).environmentObject(router)
                     case 3:
                         ScanMRTPayView().environmentObject(router)
+                    case 4:
+                        QRView().environmentObject(router)
+                    case 5:
+                        ScanSuccessView(isMRTPay: false).environmentObject(router)
                     default:
                         EmptyView()
                     }
-                }.buttonStyle(BorderedButtonStyle()).clipShape(Capsule())
+                }.buttonStyle(BorderedButtonStyle()).clipShape(Capsule()).padding(.bottom)
                 
+                if tickets.isEmpty{
                     VStack(alignment: .leading) {
                         Text("Trips")
                             .font(.caption)
@@ -58,10 +72,12 @@ struct EmptyTicketView: View {
                             .multilineTextAlignment(.leading)
                             .colorMultiply(Color(.gray))
                             .font(.system(size: 12))
-                }.padding(.top).scenePadding(.horizontal)                
+                    }.padding(.top).scenePadding(.horizontal)
+                }else{
+                    TicketListView(times: tickets)
+                }
                 
             }
-            
         }
     }
 }

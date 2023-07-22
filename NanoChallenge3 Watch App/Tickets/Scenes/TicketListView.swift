@@ -11,20 +11,22 @@ struct TicketListView: View {
     var times: [String]
     @EnvironmentObject var router: Router
     var body: some View {
+        
 
-            List {
-                TicketListHeader().listRowBackground(Color.clear)
-                
-                ForEach(times.prefix(4), id: \.self) { ticket in
-                    NavigationLink(destination: QRView()) {
-                        TicketRow(arrival: ticket)
-                    }.listRowBackground(RoundedRectangle(cornerRadius: 12)
-                        .background(Color.clear)
+        TicketListHeader().listRowBackground(Color.clear).scenePadding()
+        ForEach(times.prefix(4), id: \.self) { ticket in
+            NavigationLink(destination: QRView()) {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 12)
                         .foregroundColor(.blue)
                         .opacity(0.3)
-                    )
+                    
+                    TicketRow(arrival: ticket)
+                        .padding()
                 }
             }
+            .buttonStyle(PlainButtonStyle())
+        }
         
     }
 }
@@ -33,9 +35,8 @@ struct TicketListHeader: View {
     var body: some View {
         HStack {
             Text("Trips")
-                .font(.system(size: 25))
+                .font(.headline)
                 .fontWeight(.medium)
-                .foregroundColor(Color(red: 174 / 255, green: 191 / 255, blue: 215 / 255))
             Spacer()
         }
         

@@ -11,9 +11,9 @@ struct QRView: View {
     //Bisa diganti ambil dari class ticket (?)
     var qrIn = ["QR_IN","In","Enter"]
     var qrOut = ["QR_OUT","Out","Exit"]
-    var scanned = true
     
-    @State private var features: Tab = .scanOut
+    @State private var scanOut = false
+    @State private var features: Tab = .scanIn
     
     enum Tab {
             case scanIn, scanOut
@@ -22,18 +22,28 @@ struct QRView: View {
     var body: some View {
         VStack {
             TabView(selection: $features, content: {
-                    if scanned == true{
+                    if scanOut == true{
+                        ScanView(state: qrOut).tag(Tab.scanOut)
+                        ScanView(state: qrIn).tag(Tab.scanIn)
+                    }else{
+                        ScanView(state: qrIn).tag(Tab.scanIn)
                         ScanView(state: qrOut).tag(Tab.scanOut)
                     }
-                    ScanView(state: qrIn).tag(Tab.scanIn)
-                
+                    
             }).tabViewStyle(PageTabViewStyle())
+        }.onChange(of: scanOut) { newValue in
+            if newValue {
+                //Kalo berhasil kescan navigate ke View baru
+                //NavigateLink?
+                features = Tab.scanOut
+            } else {
+                features = Tab.scanIn
+            }
         }
     }
 }
 
 struct ScanView: View {
-
     var state: [String]
     var body: some View{
         VStack {

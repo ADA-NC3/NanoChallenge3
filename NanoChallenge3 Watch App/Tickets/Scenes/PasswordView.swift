@@ -45,6 +45,7 @@ struct PasswordView: View {
                 HStack {
                     Button(action: {
                         router.reset()
+                        WKInterfaceDevice.current().play(.retry)
                     }) {
                         ExitButtonView().frame(width:25)
                     }.buttonStyle(.borderless).offset(x:5)
@@ -86,14 +87,12 @@ struct PasswordView: View {
                         ForEach(row, id: \.self) { digit in
                             Button(action: {
                                 if digit == "Delete" {
-                                    print("Before: \(pinDigits)")
                                     pinDigits = Array(pinDigits.dropLast(1))
-                                    print("After: \(pinDigits)")
+                                 
                                 } else {
                                     if pinDigits.count < 4 && !digit.isEmpty { // Fix: prevent adding an empty string
-                                        print("Before: \(pinDigits)")
+                                        WKInterfaceDevice.current().play(.click)
                                         pinDigits.append(digit)
-                                        print("After: \(pinDigits)")
                                         
                                     }
                                 }

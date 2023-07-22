@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ScanSuccessView: View {
-    var isMRTPay = true
+    var isMRTPay: Bool?
     @EnvironmentObject var router: Router
-    @State private var timeLeft: Int = 3 // 3 minutes in seconds
+    @State private var timeLeft: Int = 2 
     @State private var successTimer: Timer?
     var body: some View {
         VStack {
@@ -42,8 +42,13 @@ struct ScanSuccessView: View {
             if timeLeft > 0 {
                 timeLeft -= 1
             } else {
-                router.path.append(3)
                 cancelSuccessTimer()
+                if isMRTPay == true{
+                    router.path.append(3)
+                }else{
+                    router.path.removeLast()
+                }
+                
             }
         }
     }
@@ -56,6 +61,6 @@ struct ScanSuccessView: View {
 
 struct ScanSuccessView_Previews: PreviewProvider {
     static var previews: some View {
-        ScanSuccessView()
+        ScanSuccessView(isMRTPay: true).environmentObject(Router())
     }
 }

@@ -10,10 +10,18 @@ import SwiftUI
 struct TicketRow: View {
     var arrival: String
     var body: some View {
-        VStack(alignment: .leading){
-            Text("Nearest Time")
-            Text(arrival).font(.title).fontWeight(.black)
-            Text("Blok M to Dukuh Atas").foregroundColor(.blue)
+        VStack(){
+            HStack {
+                Text("Nearest Time")
+                Spacer()
+            }
+            HStack {
+                Text(arrival).font(.title).fontWeight(.black)
+                Spacer()
+            }
+                Text("Blok M to Dukuh Atas").foregroundColor(.blue)
+                
+            
         }
        
 
