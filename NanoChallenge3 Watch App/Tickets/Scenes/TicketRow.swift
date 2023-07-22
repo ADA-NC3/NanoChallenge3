@@ -15,10 +15,8 @@ struct TicketRow: View {
             Text(arrival).font(.title).fontWeight(.black)
             Text("Blok M to Dukuh Atas").foregroundColor(.blue)
         }
+       
 
-           
-            
-            
     }
 }
 

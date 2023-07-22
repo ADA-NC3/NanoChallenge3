@@ -8,51 +8,67 @@
 import SwiftUI
 
 struct EmptyTicketView: View {
+    @EnvironmentObject var router: Router
+    @State var path: [Int] = []
+    @State var count: Int = 0
     var body: some View {
-        NavigationView {
-            ScrollView {
-                VStack{
-                    HStack{
-                        Text("Tickets")
-                            .font(.system(size: 25))
-                            .fontWeight(.medium)
-                            .multilineTextAlignment(.leading).colorMultiply(Color(red: 10 / 255, green: 132 / 255, blue: 255 / 255))
-                        
-                        Spacer()
-                    }.scenePadding(.horizontal)
+        NavigationStack(path: $router.path){
+            ScrollView{
+                HStack{
+                    Text("Tickets")
+                        .font(.system(size: 25))
+                        .fontWeight(.medium)
+                        .multilineTextAlignment(.leading).colorMultiply(Color(red: 174 / 255, green: 191 / 255, blue: 215 / 255))
                     
-                 
-
-                    NavigationLink(destination: PinView()) {
-                            Text("MRT Pay")
-                            .foregroundColor(.black)
-                            .fontWeight(.medium)
-                    }.buttonStyle(BorderedProminentButtonStyle()).tint(Color.green).clipShape(Capsule())
-                        
-                    
-
+                    Spacer()
+                }.scenePadding(.horizontal).padding(.bottom)
+                
+                HStack {
+                    Text("MRT Pay")
+                        .font(.caption)
+                        .fontWeight(.medium)
+                    Spacer()
+                }.scenePadding(.horizontal)
+                
+                
+                Button(action: {
+                    router.path.append(1)
+                }) {
+                    Text("Show QR").fontWeight(.medium)
+                }
+                .navigationDestination(for: Int.self){ destination in
+                    switch destination {
+                    case 1:
+                        PasswordView().environmentObject(router)
+                    case 2:
+                        ScanSuccessView().environmentObject(router)
+                    case 3:
+                        ScanMRTPayView().environmentObject(router)
+                    default:
+                        EmptyView()
+                    }
+                }.buttonStyle(BorderedButtonStyle()).clipShape(Capsule())
+                
                     VStack(alignment: .leading) {
                         Text("Trips")
-                            .font(.title3)
+                            .font(.caption)
                             .fontWeight(.medium)
+                        
                         Text("You haven’t purchased any ticket yet. Please purchase your ticket first.")
                             .multilineTextAlignment(.leading)
                             .colorMultiply(Color(.gray))
                             .font(.system(size: 12))
-                    }
-                }
+                }.padding(.top).scenePadding(.horizontal)                
+                
             }
-        }.navigationTitle{
-            Text("Tickets")
-                .bold()
-                .colorMultiply(Color(red: 0 / 255, green: 122 / 255, blue: 255 / 255))
-                .offset(x: -30)
+            
         }
     }
 }
 
+
 struct EmptyTicketView_Previews: PreviewProvider {
     static var previews: some View {
-        EmptyTicketView()
+        EmptyTicketView().environmentObject(Router())
     }
 }

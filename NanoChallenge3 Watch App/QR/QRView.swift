@@ -37,9 +37,20 @@ struct ScanView: View {
     var state: [String]
     var body: some View{
         VStack {
-            Text("Scan \(state[1]) QR").font(.title3).fontWeight(.medium)
+            HStack {
+                Spacer()
+                Text("Scan \(state[1])")
+                    .font(.title3)
+                    .fontWeight(.medium)
+                    .foregroundColor(.blue)
+            }.scenePadding(.horizontal)
+            
             Image("\(state[0])").resizable().frame(width:107.5, height: 107.5)
-            Text("\(state[2]) Blok M Station").padding(.top)
+            
+            Text("\(state[2]) Blok M Station")
+                .font(.system(size:12))
+                .foregroundColor(.gray)
+                .padding(.top)
         }
     }
 }

@@ -16,19 +16,16 @@
 		38B86E132A61319400686287 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B86E122A61319400686287 /* ContentView.swift */; };
 		38B86E152A61319500686287 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B86E142A61319500686287 /* Assets.xcassets */; };
 		38B86E182A61319500686287 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B86E172A61319500686287 /* Preview Assets.xcassets */; };
-		9518A9172A665E91004EBB52 /* TicketList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518A9162A665E91004EBB52 /* TicketList.swift */; };
+		9518A9172A665E91004EBB52 /* TicketListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518A9162A665E91004EBB52 /* TicketListView.swift */; };
 		9518A9192A665EBF004EBB52 /* TicketRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518A9182A665EBF004EBB52 /* TicketRow.swift */; };
-		9518A91B2A665FB8004EBB52 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518A91A2A665FB8004EBB52 /* Ticket.swift */; };
-		9518A91C2A665FB8004EBB52 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518A91A2A665FB8004EBB52 /* Ticket.swift */; };
 		9518A91E2A667F9B004EBB52 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518A91D2A667F9B004EBB52 /* QRView.swift */; };
 		9518A91F2A667F9B004EBB52 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518A91D2A667F9B004EBB52 /* QRView.swift */; };
 		958EFEF22A67B498005F6DC8 /* EmptyTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958EFEF12A67B498005F6DC8 /* EmptyTicketView.swift */; };
-		958EFEF42A68EA54005F6DC8 /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958EFEF32A68EA54005F6DC8 /* PinView.swift */; };
 		958EFEF62A68F179005F6DC8 /* ScanMRTPayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958EFEF52A68F179005F6DC8 /* ScanMRTPayView.swift */; };
-		958EFEF82A69185F005F6DC8 /* ValidateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958EFEF72A69185F005F6DC8 /* ValidateView.swift */; };
-		958EFEFD2A6927A1005F6DC8 /* QRGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958EFEFC2A6927A1005F6DC8 /* QRGeneratorView.swift */; };
 		958EFF042A693737005F6DC8 /* ScanSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958EFF032A693737005F6DC8 /* ScanSuccessView.swift */; };
 		958EFF092A6A66D0005F6DC8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958EFF082A6A66D0005F6DC8 /* Router.swift */; };
+		958EFF0B2A6BC8C1005F6DC8 /* ExitButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958EFF0A2A6BC8C1005F6DC8 /* ExitButtonView.swift */; };
+		958EFF132A6BDBD8005F6DC8 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958EFF122A6BDBD8005F6DC8 /* PasswordView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,17 +63,15 @@
 		38B86E122A61319400686287 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		38B86E142A61319500686287 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38B86E172A61319500686287 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		9518A9162A665E91004EBB52 /* TicketList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketList.swift; sourceTree = "<group>"; };
+		9518A9162A665E91004EBB52 /* TicketListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketListView.swift; sourceTree = "<group>"; };
 		9518A9182A665EBF004EBB52 /* TicketRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketRow.swift; sourceTree = "<group>"; };
-		9518A91A2A665FB8004EBB52 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		9518A91D2A667F9B004EBB52 /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
 		958EFEF12A67B498005F6DC8 /* EmptyTicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTicketView.swift; sourceTree = "<group>"; };
-		958EFEF32A68EA54005F6DC8 /* PinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
 		958EFEF52A68F179005F6DC8 /* ScanMRTPayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanMRTPayView.swift; sourceTree = "<group>"; };
-		958EFEF72A69185F005F6DC8 /* ValidateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateView.swift; sourceTree = "<group>"; };
-		958EFEFC2A6927A1005F6DC8 /* QRGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGeneratorView.swift; sourceTree = "<group>"; };
 		958EFF032A693737005F6DC8 /* ScanSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanSuccessView.swift; sourceTree = "<group>"; };
 		958EFF082A6A66D0005F6DC8 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		958EFF0A2A6BC8C1005F6DC8 /* ExitButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitButtonView.swift; sourceTree = "<group>"; };
+		958EFF122A6BDBD8005F6DC8 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,15 +134,11 @@
 			children = (
 				958EFEFE2A69331A005F6DC8 /* Modifier */,
 				38B86E102A61319400686287 /* NanoChallenge3App.swift */,
-				9518A91A2A665FB8004EBB52 /* Ticket.swift */,
-				958EFEF32A68EA54005F6DC8 /* PinView.swift */,
 				958EFF082A6A66D0005F6DC8 /* Router.swift */,
-				958EFEF72A69185F005F6DC8 /* ValidateView.swift */,
 				958EFF052A693749005F6DC8 /* QR */,
 				958EFF062A693781005F6DC8 /* Tickets */,
 				38B86E142A61319500686287 /* Assets.xcassets */,
 				38B86E162A61319500686287 /* Preview Content */,
-				958EFEFC2A6927A1005F6DC8 /* QRGeneratorView.swift */,
 			);
 			path = "NanoChallenge3 Watch App";
 			sourceTree = "<group>";
@@ -163,6 +154,7 @@
 		958EFEFE2A69331A005F6DC8 /* Modifier */ = {
 			isa = PBXGroup;
 			children = (
+				958EFF0A2A6BC8C1005F6DC8 /* ExitButtonView.swift */,
 			);
 			path = Modifier;
 			sourceTree = "<group>";
@@ -189,9 +181,10 @@
 		958EFF072A69378F005F6DC8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				9518A9162A665E91004EBB52 /* TicketList.swift */,
+				9518A9162A665E91004EBB52 /* TicketListView.swift */,
 				958EFEF12A67B498005F6DC8 /* EmptyTicketView.swift */,
 				9518A9182A665EBF004EBB52 /* TicketRow.swift */,
+				958EFF122A6BDBD8005F6DC8 /* PasswordView.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -304,7 +297,6 @@
 			files = (
 				38B86E012A61319300686287 /* ContentView.swift in Sources */,
 				9518A91E2A667F9B004EBB52 /* QRView.swift in Sources */,
-				9518A91B2A665FB8004EBB52 /* Ticket.swift in Sources */,
 				38B86DFF2A61319300686287 /* NanoChallenge3App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,17 +305,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				958EFEF82A69185F005F6DC8 /* ValidateView.swift in Sources */,
-				9518A91C2A665FB8004EBB52 /* Ticket.swift in Sources */,
+				958EFF0B2A6BC8C1005F6DC8 /* ExitButtonView.swift in Sources */,
 				9518A9192A665EBF004EBB52 /* TicketRow.swift in Sources */,
-				958EFEF42A68EA54005F6DC8 /* PinView.swift in Sources */,
 				958EFEF62A68F179005F6DC8 /* ScanMRTPayView.swift in Sources */,
 				38B86E132A61319400686287 /* ContentView.swift in Sources */,
 				38B86E112A61319400686287 /* NanoChallenge3App.swift in Sources */,
 				958EFF042A693737005F6DC8 /* ScanSuccessView.swift in Sources */,
-				9518A9172A665E91004EBB52 /* TicketList.swift in Sources */,
+				9518A9172A665E91004EBB52 /* TicketListView.swift in Sources */,
+				958EFF132A6BDBD8005F6DC8 /* PasswordView.swift in Sources */,
 				958EFF092A6A66D0005F6DC8 /* Router.swift in Sources */,
-				958EFEFD2A6927A1005F6DC8 /* QRGeneratorView.swift in Sources */,
 				958EFEF22A67B498005F6DC8 /* EmptyTicketView.swift in Sources */,
 				9518A91F2A667F9B004EBB52 /* QRView.swift in Sources */,
 			);

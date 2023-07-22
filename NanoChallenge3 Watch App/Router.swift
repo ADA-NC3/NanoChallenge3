@@ -14,4 +14,6 @@ class Router: ObservableObject {
     func reset(){
         self.path = NavigationPath()
     }
+    
+    
 }

@@ -7,21 +7,25 @@
 
 import SwiftUI
 
-struct TicketList: View {
+struct TicketListView: View {
     var times: [String]
     @EnvironmentObject var router: Router
     var body: some View {
-        NavigationView {
+
             List {
                 TicketListHeader().listRowBackground(Color.clear)
                 
                 ForEach(times.prefix(4), id: \.self) { ticket in
                     NavigationLink(destination: QRView()) {
                         TicketRow(arrival: ticket)
-                    }
+                    }.listRowBackground(RoundedRectangle(cornerRadius: 12)
+                        .background(Color.clear)
+                        .foregroundColor(.blue)
+                        .opacity(0.3)
+                    )
                 }
-            }.listStyle(DefaultListStyle())
-        }
+            }
+        
     }
 }
 
@@ -31,9 +35,7 @@ struct TicketListHeader: View {
             Text("Trips")
                 .font(.system(size: 25))
                 .fontWeight(.medium)
-                .foregroundColor(Color(red: 10 / 255, green: 132 / 255, blue: 255 / 255))
-                .padding()
-            
+                .foregroundColor(Color(red: 174 / 255, green: 191 / 255, blue: 215 / 255))
             Spacer()
         }
         
@@ -42,6 +44,6 @@ struct TicketListHeader: View {
 
 struct TicketList_Previews: PreviewProvider {
     static var previews: some View {
-        TicketList(times: ["14.05", "14.12","14.13","14.14","14.15"])
+        TicketListView(times: ["14.05", "14.12","14.13","14.14","14.15"])
     }
 }
